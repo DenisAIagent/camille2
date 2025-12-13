@@ -5,17 +5,21 @@ import { NextRequest, NextResponse } from 'next/server';
 // Middleware i18n de base
 const intlMiddleware = createMiddleware(routing);
 
-// Wrapper pour sécuriser les cookies
+// Wrapper pour sécuriser les cookies et valider les locales
 export default async function middleware(request: NextRequest) {
     const response = intlMiddleware(request);
 
-    // Sécuriser le cookie NEXT_LOCALE
+    // Sécuriser le cookie NEXT_LOCALE avec validation stricte
     const locale = request.cookies.get('NEXT_LOCALE');
     if (locale && response instanceof NextResponse) {
-        response.cookies.set('NEXT_LOCALE', locale.value, {
+        // Validate locale against allowed values only
+        const allowedLocales = routing.locales as readonly string[];
+        const validatedLocale = allowedLocales.includes(locale.value) ? locale.value : routing.defaultLocale;
+
+        response.cookies.set('NEXT_LOCALE', validatedLocale, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
+            sameSite: 'strict', // Changed from 'lax' to 'strict' for better CSRF protection
             maxAge: 31536000, // 1 an
             path: '/',
         });
