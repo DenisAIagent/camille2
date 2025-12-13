@@ -41,7 +41,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | Camille Labasse Ostéopathe`
     },
     description,
-    metadataBase: new URL('https://camille-alpha.vercel.app'),
+    metadataBase: new URL(process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -53,7 +55,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `/${locale}`,
       siteName: 'Camille Labasse Ostéopathe',
       locale: locale,
       type: 'website',
