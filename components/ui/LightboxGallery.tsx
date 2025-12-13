@@ -15,6 +15,8 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
     const [mounted, setMounted] = useState(false);
     const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
     const [imageLoading, setImageLoading] = useState(true);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
     useEffect(() => {
         // Pattern standard React Portal - Nécessaire pour éviter les erreurs d'hydratation SSR
@@ -62,6 +64,35 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
             prev !== null ? (prev === images.length - 1 ? 0 : prev + 1) : null
         );
     }, [images.length]);
+
+    // Gestion du swipe tactile pour mobile
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            onNext();
+        } else if (isRightSwipe) {
+            onPrev();
+        }
+
+        setTouchStart(null);
+        setTouchEnd(null);
+    };
 
     // Navigation clavier
     useEffect(() => {
@@ -114,6 +145,9 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
                 <div
                     className="relative w-full h-full max-w-[95vw] max-h-[90vh] p-4 md:p-8"
                     onClick={(e) => e.stopPropagation()}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
                 >
                     {/* Loading indicator */}
                     {imageLoading && (
