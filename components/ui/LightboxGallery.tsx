@@ -15,8 +15,8 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
     const [mounted, setMounted] = useState(false);
     const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
     const [imageLoading, setImageLoading] = useState(true);
-    const [touchStart, setTouchStart] = useState<number | null>(null);
-    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
+    const [touchEnd, setTouchEnd] = useState<{ x: number; y: number } | null>(null);
 
     useEffect(() => {
         // Pattern standard React Portal - Nécessaire pour éviter les erreurs d'hydratation SSR
@@ -70,21 +70,33 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
 
     const onTouchStart = (e: React.TouchEvent) => {
         setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
+        setTouchStart({
+            x: e.targetTouches[0].clientX,
+            y: e.targetTouches[0].clientY
+        });
     };
 
     const onTouchMove = (e: React.TouchEvent) => {
-        setTouchEnd(e.targetTouches[0].clientX);
+        setTouchEnd({
+            x: e.targetTouches[0].clientX,
+            y: e.targetTouches[0].clientY
+        });
     };
 
     const onTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
 
-        const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
-        const isRightSwipe = distance < -minSwipeDistance;
+        const distanceX = touchStart.x - touchEnd.x;
+        const distanceY = touchStart.y - touchEnd.y;
 
-        if (isLeftSwipe) {
+        const isLeftSwipe = distanceX > minSwipeDistance;
+        const isRightSwipe = distanceX < -minSwipeDistance;
+        const isDownSwipe = distanceY < -minSwipeDistance;
+
+        // Priorité au swipe vertical (fermer) si détecté
+        if (isDownSwipe && Math.abs(distanceY) > Math.abs(distanceX)) {
+            onClose();
+        } else if (isLeftSwipe) {
             onNext();
         } else if (isRightSwipe) {
             onPrev();
@@ -176,8 +188,8 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
             </div>
 
             {/* Instructions pour mobile */}
-            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/60 text-sm md:hidden">
-                Glissez pour naviguer
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/60 text-sm md:hidden text-center">
+                Glissez horizontalement pour naviguer<br />Glissez vers le bas pour fermer
             </div>
         </div>
     );
