@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npm install)",
+      "Bash(lsof:*)",
+      "Bash(kill:*)",
+      "Bash(tree:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Add dark mode, Google Analytics, hCaptcha & Resend integration\n\n🎨 Dark Mode\n- Implement dynamic light/dark theme toggle using next-themes\n- Add ThemeProvider and ThemeToggle components\n- Create custom dark color palette (backgrounds, text, borders)\n- Fix modal centering and animations for theme transitions\n- Update all components for dark mode compatibility\n\n📊 Google Analytics 4\n- Integrate GA4 tracking (G-YVSR4T8E7G)\n- Use Next.js Script component for optimal performance\n- Track page views and user navigation automatically\n\n🛡️ Security & Anti-spam\n- Configure hCaptcha for contact form protection\n- Site Key: 48182a98-4380-4b64-a196-cc7454409b36\n- Server-side verification implemented\n\n📧 Email Integration\n- Integrate Resend API for email delivery  \n- Professional email template with brand colors\n- Contact email: camilleosteopatia@gmail.com\n- Fallback to dev mode when API key not configured\n\n📝 Documentation\n- Add .env.example with all required environment variables\n- Update .gitignore to properly ignore build files in subdirectories\n- Document hCaptcha, Resend, and Google Analytics setup\n\n🐛 Bug Fixes\n- Fix skip_to_content translations (fr, pt, en)\n- Fix modal positioning with proper flexbox centering\n- Fix tooltip colors in floating contact buttons\n- Fix EmailModal text colors for better contrast\n- Fix overlay and button visibility in dark mode\n\n📂 Project Structure\n- Reorganize files into \"version claire\" directory\n- Keep backward compatibility with existing structure\n\n🚀 Generated with Claude Code (https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git init:*)"
+    ]
+  },
+  "disabledMcpjsonServers": [
+    "n8n-mcp"
+  ]
+}
