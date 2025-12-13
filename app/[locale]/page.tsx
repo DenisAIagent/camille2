@@ -181,9 +181,9 @@ export default function HomePage() {
                 <Image
                   src="/images/photos/camille-24 - Grande.webp"
                   alt="Camille Labasse - Ostéopathe"
-                  width={600}
-                  height={900}
-                  quality={80}
+                  width={665}
+                  height={443}
+                  quality={75}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
                 />

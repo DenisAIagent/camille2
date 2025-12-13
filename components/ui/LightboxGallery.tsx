@@ -213,9 +213,9 @@ export default function LightboxGallery({ images, basePath = '/images/photos/' }
                         <Image
                             src={`${basePath}${photo}`}
                             alt={`Cabinet Camille Labasse ${index + 1}`}
-                            width={400}
-                            height={400}
-                            quality={75}
+                            width={478}
+                            height={319}
+                            quality={70}
                             sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                             loading="lazy"
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
