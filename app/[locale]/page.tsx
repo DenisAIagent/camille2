@@ -77,7 +77,7 @@ export default function HomePage() {
             "image": "https://camille-osteopathe.com/images/photos/camille-24%20-%20Grande.webp",
             "@id": "https://camille-osteopathe.com",
             "url": "https://camille-osteopathe.com",
-            "telephone": "+351912345678", // À remplacer par le vrai numéro si disponible
+            "telephone": "+351930505939",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Avenida de Roma",
