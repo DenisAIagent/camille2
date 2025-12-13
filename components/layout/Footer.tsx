@@ -6,7 +6,7 @@ export default function Footer({ locale }: { locale: string }) {
     const t = useTranslations("ContactPage");
 
     return (
-        <footer className="relative bg-gradient-to-b from-muted/30 to-muted/50 border-t border-primary/10 py-16 mt-24 overflow-hidden h-[800px]">
+        <footer className="relative bg-gradient-to-b from-muted/30 to-muted/50 border-t border-primary/10 py-16 mt-24 overflow-hidden min-h-[1000px] md:min-h-[800px]" style={{ contentVisibility: 'auto', containIntrinsicSize: '1000px' }}>
             {/* Background decoration */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
