@@ -89,7 +89,7 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
             />
 
             {/* Hero Section avec image */}
-            <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden parallax-container">
+            <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden parallax-container">
                 <div
                     className="absolute inset-0 z-0"
                     style={{
@@ -103,13 +103,13 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
                 </div>
 
                 <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-8 text-foreground drop-shadow-lg animate-fade-in-up">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-0 text-foreground drop-shadow-lg animate-fade-in-up">
                         {t('h1')}
                     </h1>
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 max-w-6xl pt-6 pb-24">
+            <div className="container mx-auto px-4 max-w-6xl pt-8 pb-24">
                 <div className="space-y-16 md:space-y-20">
                     {/* Comprendre l'Ostéopathie */}
                     <FeatureBlock

@@ -86,7 +86,7 @@ export default async function TraumaPage({ params }: { params: Promise<{ locale:
             />
 
             {/* Hero Section avec image */}
-            <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden parallax-container">
+            <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden parallax-container">
                 <div
                     className="absolute inset-0 z-0"
                     style={{
@@ -106,7 +106,7 @@ export default async function TraumaPage({ params }: { params: Promise<{ locale:
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 max-w-6xl pt-6 pb-24">
+            <div className="container mx-auto px-4 max-w-6xl pt-8 pb-24">
                 <div className="space-y-16 md:space-y-20">
                     {/* Comment le corps stocke le trauma */}
                     <FeatureBlock
