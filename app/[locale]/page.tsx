@@ -120,6 +120,7 @@ export default function HomePage() {
             alt="Camille Labasse Ostéopathe - Cabinet Lisbonne"
             fill
             priority
+            fetchPriority="high"
             quality={85}
             sizes="100vw"
             className="object-cover object-center"
