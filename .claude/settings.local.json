@@ -15,7 +15,16 @@
       "Bash(git push:*)",
       "Bash(git commit:*)",
       "Bash(git remote add:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git mv:*)",
+      "Bash(xargs kill -9)",
+      "Bash(npm audit:*)",
+      "Bash(git rm:*)",
+      "Bash(npm run build:*)",
+      "Bash(snyk test:*)",
+      "Bash(snyk code test:*)",
+      "Bash(Camille Labasse - Consultório Avenida de Roma\"\n  After: \"Osteopata Lisboa)",
+      "Bash(Camille Labasse D.O.\"\n  \n✅ Expected improvements:\n- SEO score: 92/100 → 100/100\n- Better SERP display (titles fit perfectly)\n- Correct canonical URL on production\n\n🚀 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ]
   },
   "disabledMcpjsonServers": [

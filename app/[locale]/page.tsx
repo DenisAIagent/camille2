@@ -13,9 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const _t = await getTranslations({ locale, namespace: 'HomePage' });
 
   const titles = {
-    fr: 'Ostéopathe Lisbonne | Camille Labasse - Cabinet Avenida de Roma',
-    pt: 'Osteopata Lisboa | Camille Labasse - Consultório Avenida de Roma',
-    en: 'Osteopath Lisbon | Camille Labasse - Avenida de Roma Practice'
+    fr: 'Ostéopathe Lisbonne | Camille Labasse D.O.',
+    pt: 'Osteopata Lisboa | Camille Labasse D.O.',
+    en: 'Osteopath Lisbon | Camille Labasse D.O.'
   };
 
   const descriptions = {

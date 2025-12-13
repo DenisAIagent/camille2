@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
 
   const titles = {
-    fr: 'Camille Labasse | Ostéopathe D.O. à Lisbonne',
-    pt: 'Camille Labasse | Osteopata D.O. em Lisboa',
-    en: 'Camille Labasse | Osteopath D.O. in Lisbon'
+    fr: 'Ostéopathe Lisbonne | Camille Labasse D.O.',
+    pt: 'Osteopata Lisboa | Camille Labasse D.O.',
+    en: 'Osteopath Lisbon | Camille Labasse D.O.'
   };
 
   const descriptions = {
@@ -64,7 +64,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ? `https://${process.env.VERCEL_URL}`
       : process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
     alternates: {
-      canonical: `/${locale}`,
       languages: {
         'fr': '/fr',
         'pt': '/pt',
