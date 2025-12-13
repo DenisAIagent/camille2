@@ -59,11 +59,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       follow: true,
     },
     alternates: {
-      canonical: `https://camille-osteopathe.com/${locale}`,
+      canonical: `/${locale}`,
       languages: {
-        'fr': 'https://camille-osteopathe.com/fr',
-        'pt': 'https://camille-osteopathe.com/pt',
-        'en': 'https://camille-osteopathe.com/en',
+        'fr': '/fr',
+        'pt': '/pt',
+        'en': '/en',
       },
     },
   };
