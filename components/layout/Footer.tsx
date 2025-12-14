@@ -115,6 +115,9 @@ export default function Footer({ locale }: { locale: string }) {
                         <Link href="/contact" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
                             Contact
                         </Link>
+                        <Link href="/faq" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
+                            FAQ
+                        </Link>
                         <span className="text-muted-foreground/30">|</span>
                         <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
                             Confidentialité
