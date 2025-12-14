@@ -81,10 +81,10 @@ export default function FeatureBlock({
     );
 
     const TextBlock = (
-        <div className="relative w-full aspect-[16/10]">
-            {/* Text content with horizontal aspect ratio matching image */}
-            <div className="gradient-subtle rounded-3xl p-8 md:p-10 lg:p-12 shadow-premium hover:shadow-glow transition-smooth w-full h-full flex flex-col justify-center">
-                <h2 className="text-2xl md:text-3xl font-serif mb-6 text-primary">
+        <div className="relative w-full md:aspect-[16/10]">
+            {/* Text content - auto height on mobile, fixed aspect on desktop */}
+            <div className="gradient-subtle rounded-3xl p-6 md:p-10 lg:p-12 shadow-premium hover:shadow-glow transition-smooth w-full md:h-full flex flex-col justify-center">
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-serif mb-4 md:mb-6 text-primary">
                     {title}
                 </h2>
                 <p className="text-sm md:text-base text-foreground/80 leading-relaxed whitespace-pre-line">
