@@ -109,7 +109,7 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 max-w-6xl pt-8 pb-24">
+            <div className="container mx-auto px-4 max-w-6xl pt-8 pb-12">
                 <div className="space-y-16 md:space-y-20">
                     {/* Comprendre l'Ostéopathie */}
                     <FeatureBlock
@@ -164,7 +164,7 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
                     </section>
 
                     {/* CTA Final */}
-                    <section className="text-center pt-0 pb-12">
+                    <section className="text-center pt-0 pb-0">
                         <h3 className="text-2xl font-serif mb-6 text-foreground">{t('cta_question')}</h3>
                         <Link
                             href="/contact"
