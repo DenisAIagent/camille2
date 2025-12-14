@@ -119,7 +119,7 @@
     "q3": "Combien coûte une séance d'ostéopathie ?",
     "a3": "La consultation coûte 60€. Tarif réduit de 50€ pour les bébés de moins d'1 an et les personnes au chômage. <a href='/contact' class='text-primary hover:underline font-medium'>Voir tous les tarifs et prendre rendez-vous</a>.",
     "q4": "L'ostéopathie est-elle remboursée ?",
-    "a4": "Au Portugal, l'ostéopathie n'est généralement pas remboursée par la sécurité sociale. Cependant, certaines assurances privées (« seguros de saúde ») offrent une couverture partielle. Je fournis une facture détaillée que vous pouvez soumettre à votre assurance.",
+    "a4": "Je ne suis pas affiliée à une assurance (« seguro de saúde »). Cependant, je fournis une facture détaillée que vous pouvez soumettre vous-même à votre assurance pour demander un remboursement partiel, selon votre contrat.",
     "q5": "Pour quels types de maux peut-on consulter ?",
     "a5": "L'ostéopathie traite de nombreux troubles : douleurs musculo-articulaires, migraines, troubles digestifs, stress, insomnies, vertiges, acouphènes, troubles menstruels, et bien plus. <a href='/osteopathie' class='text-primary hover:underline font-medium'>Découvrir tous les troubles traités</a>.",
     "q6": "L'ostéopathie est-elle adaptée aux bébés et femmes enceintes ?",
