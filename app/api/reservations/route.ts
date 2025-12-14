@@ -76,8 +76,8 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: 'Réservations Ostéopathe <onboarding@resend.dev>',
       to: CONTACT_EMAIL,
-      replyTo: email,
-      subject: `📅 Nouvelle demande de RDV - ${name}`,
+      // replyTo: email, // Disabled for Resend free tier with onboarding@resend.dev
+      subject: `📅 Nouvelle demande de RDV - ${name} (${email})`,
       html: emailHtml,
     })
 
