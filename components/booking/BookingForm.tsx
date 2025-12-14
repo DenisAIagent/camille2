@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { addDays, isSunday, isMonday } from 'date-fns'
+import { fr, pt, enUS } from 'date-fns/locale'
 import { Calendar as CalendarIcon, Clock, User, Mail, Phone, MessageSquare, CheckCircle2 } from 'lucide-react'
 
 interface BookingFormProps {
@@ -221,7 +222,7 @@ export function BookingForm({ locale = 'pt' }: BookingFormProps) {
                 onSelect={setSelectedDate}
                 disabled={isDateDisabled}
                 className="rounded-md border"
-                locale={locale === 'fr' ? 'fr' : locale === 'pt' ? 'pt' : 'en'}
+                locale={locale === 'fr' ? fr : locale === 'pt' ? pt : enUS}
               />
             </div>
             <p className="text-xs text-center text-muted-foreground">
