@@ -163,7 +163,7 @@ export async function GET(
 
     try {
       await resend.emails.send({
-        from: 'Camille Labasse Ostéopathe <noreply@camille-osteopathe.com>',
+        from: 'Camille Labasse Ostéopathe <onboarding@resend.dev>',
         to: appointment.email,
         subject: emailContent.subject,
         html: emailContent.html

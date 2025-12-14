@@ -286,7 +286,7 @@ export async function POST(request: NextRequest) {
 
         // Send email with text fallback (all content is HTML-escaped)
         const { data, error } = await resend.emails.send({
-            from: 'Site Web <noreply@camille-osteopathe.com>',
+            from: 'Site Web <onboarding@resend.dev>',
             to: [contactEmail],
             replyTo: email,
             subject: `📬 Nouveau message de ${name}`,
