@@ -12,6 +12,7 @@ import SkipToContent from "@/components/ui/SkipToContent";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import CookieConsent from "@/components/cookies/CookieConsent";
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -140,6 +141,7 @@ export default async function LocaleLayout({
             <Footer locale={locale} />
             <FloatingContactButtons />
             <BackToTop />
+            <CookieConsent />
             <Toaster position="top-right" richColors closeButton />
           </NextIntlClientProvider>
         </ThemeProvider>

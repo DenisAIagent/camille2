@@ -135,5 +135,13 @@
     "Reservations": {
         "metaTitle": "Marcar consulta - Osteopata Lisboa",
         "metaDescription": "Marque uma consulta online com Camille Labasse, osteopata D.O em Lisboa. Confirmação em 24h."
+    },
+    "CookieConsent": {
+        "title": "Respeito pela sua privacidade",
+        "description": "Utilizamos cookies para melhorar a sua experiência (Google Analytics) e conservamos os seus dados de reserva (nome, email, telefone) para a gestão de consultas. Estas informações são protegidas e nunca são partilhadas com terceiros.",
+        "accept": "Aceitar tudo",
+        "refuse": "Recusar cookies",
+        "learnMore": "Saber mais",
+        "close": "Fechar"
     }
 }

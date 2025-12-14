@@ -135,5 +135,13 @@
     "Reservations": {
         "metaTitle": "Book an appointment - Osteopath Lisbon",
         "metaDescription": "Book an appointment online with Camille Labasse, osteopath D.O in Lisbon. Confirmation within 24h."
+    },
+    "CookieConsent": {
+        "title": "Respect for your privacy",
+        "description": "We use cookies to improve your experience (Google Analytics) and store your booking data (name, email, phone) for appointment management. This information is protected and never shared with third parties.",
+        "accept": "Accept all",
+        "refuse": "Refuse cookies",
+        "learnMore": "Learn more",
+        "close": "Close"
     }
 }

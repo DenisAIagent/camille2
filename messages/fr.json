@@ -135,5 +135,13 @@
   "Reservations": {
     "metaTitle": "Réserver un rendez-vous - Ostéopathe Lisbonne",
     "metaDescription": "Prenez rendez-vous en ligne avec Camille Labasse, ostéopathe D.O à Lisbonne. Consultation confirmée sous 24h."
+  },
+  "CookieConsent": {
+    "title": "Respect de votre vie privée",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience (Google Analytics) et conservons vos données de réservation (nom, email, téléphone) pour la gestion des rendez-vous. Ces informations sont protégées et ne sont jamais partagées avec des tiers.",
+    "accept": "Tout accepter",
+    "refuse": "Refuser les cookies",
+    "learnMore": "En savoir plus",
+    "close": "Fermer"
   }
 }
