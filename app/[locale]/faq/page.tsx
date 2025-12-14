@@ -54,14 +54,14 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
     const t = await getTranslations({ locale, namespace: 'FAQPage' });
 
     const faqs = [
-        { id: 'q1', question: t('q1'), answer: t('a1') },
-        { id: 'q2', question: t('q2'), answer: t('a2') },
-        { id: 'q3', question: t('q3'), answer: t('a3') },
-        { id: 'q4', question: t('q4'), answer: t('a4') },
-        { id: 'q5', question: t('q5'), answer: t('a5') },
-        { id: 'q6', question: t('q6'), answer: t('a6') },
-        { id: 'q7', question: t('q7'), answer: t('a7') },
-        { id: 'q8', question: t('q8'), answer: t('a8') },
+        { id: 'q1', question: t('q1'), answer: t.raw('a1') },
+        { id: 'q2', question: t('q2'), answer: t.raw('a2') },
+        { id: 'q3', question: t('q3'), answer: t.raw('a3') },
+        { id: 'q4', question: t('q4'), answer: t.raw('a4') },
+        { id: 'q5', question: t('q5'), answer: t.raw('a5') },
+        { id: 'q6', question: t('q6'), answer: t.raw('a6') },
+        { id: 'q7', question: t('q7'), answer: t.raw('a7') },
+        { id: 'q8', question: t('q8'), answer: t.raw('a8') },
     ];
 
     return (
