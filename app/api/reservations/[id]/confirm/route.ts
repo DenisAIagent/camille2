@@ -152,6 +152,9 @@ export async function GET(
     const calendarUrl = generateGoogleCalendarURL(calendarEvent)
 
     // Send confirmation email to client
+    // DISABLED: Resend free tier with onboarding@resend.dev can only send to adpromo.media@gmail.com
+    // TODO: Enable this when domain is verified at resend.com/domains
+    /*
     const emailContent = getClientConfirmationEmail({
       id: appointment.id,
       patientName: appointment.patientName,
@@ -172,6 +175,7 @@ export async function GET(
       console.error('Error sending confirmation email:', emailError)
       // Continue anyway - appointment is confirmed
     }
+    */
 
     // Return success page
     return new NextResponse(
@@ -203,7 +207,11 @@ export async function GET(
       <p style="margin: 0 0 0.5rem;"><strong>Date :</strong> ${formattedDate}</p>
       <p style="margin: 0;"><strong>Heure :</strong> ${appointment.timeSlot}</p>
     </div>
-    <p style="color: #10b981; font-weight: 600;">📧 Un email de confirmation a été envoyé au patient.</p>
+    <p style="color: #f59e0b; font-weight: 600;">⚠️ Le patient n'a pas reçu d'email automatique. Veuillez le contacter directement.</p>
+    <p style="color: #6b7280; font-size: 0.9rem;">
+      📧 ${appointment.email}<br>
+      📱 ${appointment.phone}
+    </p>
   </div>
 </body>
 </html>
