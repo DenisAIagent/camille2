@@ -15,10 +15,10 @@ export default function Footer({ locale }: { locale: string }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Brand Section */}
                     <div className="space-y-4">
-                        <h3 className="font-serif text-2xl font-medium mb-4 text-gradient">Camille Labasse</h3>
+                        <h3 className="font-serif text-lg font-medium mb-4 text-gradient">Camille Labasse ostéopathe D.O</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Ostéopathe D.O<br />
-                            Ostéopathie biodynamique<br />
+                            Adultes, enfants, animaux domestiques<br />
+                            Approche du trauma<br />
                             Lisbonne, Portugal
                         </p>
                     </div>

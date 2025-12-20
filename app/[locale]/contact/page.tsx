@@ -115,7 +115,7 @@ export default function ContactPage() {
 
                         <section>
                             <h2 className="text-2xl font-serif mb-6 text-primary">{t('h2_cancellation')}</h2>
-                            <p className="text-muted-foreground">{t('cancellation_policy')}</p>
+                            <p className="text-muted-foreground whitespace-pre-line">{t('cancellation_policy')}</p>
                         </section>
                     </div>
 

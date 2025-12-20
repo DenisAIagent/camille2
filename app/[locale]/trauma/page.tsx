@@ -110,8 +110,8 @@ export default async function TraumaPage({ params }: { params: Promise<{ locale:
                 <div className="space-y-16 md:space-y-20">
                     {/* Comment le corps stocke le trauma */}
                     <FeatureBlock
-                        imageSrc="/images/photos/camille-53 - Grande.jpeg"
-                        imageAlt="Comment le corps stocke le trauma"
+                        imageSrc="/images/photos/camille-38 - Grande.webp"
+                        imageAlt="Travail ostéopathique crânien"
                         title={t('h2_why_body')}
                         description={t('text_intro')}
                         layout="image-left"
@@ -120,8 +120,8 @@ export default async function TraumaPage({ params }: { params: Promise<{ locale:
 
                     {/* Comment se déroule le travail somatique */}
                     <FeatureBlock
-                        imageSrc="/images/photos/camille-06 - Grande.webp"
-                        imageAlt="Travail somatique et ostéopathie"
+                        imageSrc="/images/photos/camille-50 - Grande.webp"
+                        imageAlt="Ostéopathie crânienne et trauma"
                         title={t('h2_how')}
                         description={t('text_work')}
                         layout="image-right"
@@ -131,8 +131,8 @@ export default async function TraumaPage({ params }: { params: Promise<{ locale:
 
                     {/* Pour qui est cette approche ? */}
                     <FeatureBlock
-                        imageSrc="/images/photos/camille-09 - Grande.webp"
-                        imageAlt="Pour qui l&apos;ostéopathie trauma"
+                        imageSrc="/images/photos/camille-45 - Grande.webp"
+                        imageAlt="Approche somatique crânienne"
                         title={t('h2_who_for')}
                         description={t('text_who')}
                         layout="image-left"
