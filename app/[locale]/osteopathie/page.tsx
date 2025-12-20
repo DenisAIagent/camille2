@@ -1,7 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
-import FeatureBlock from '@/components/ui/FeatureBlock';
+import Image from 'next/image';
+import LightboxGallery from '@/components/ui/LightboxGallery';
+import WhoIsItFor from '@/components/home/WhoIsItFor';
+import { Button } from '@/components/ui/button';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
@@ -67,6 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function OsteopathyPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'OsteopathyPage' });
+    const tHome = await getTranslations({ locale, namespace: 'HomePage' });
 
     return (
         <div className="flex flex-col">
@@ -109,72 +113,139 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 max-w-6xl pt-8 pb-12">
-                <div className="space-y-16 md:space-y-20">
-                    {/* Comprendre l'Ostéopathie */}
-                    <FeatureBlock
-                        imageSrc="/images/photos/camille-22 - Grande.webp"
-                        imageAlt="Comprendre l&apos;ostéopathie"
-                        title={t('h2_understand')}
-                        description={t('text_understand')}
-                        layout="image-right"
-                        decorationPosition="top-right"
-                    />
-
-                    {/* Ostéopathie Fonctionnelle */}
-                    <FeatureBlock
-                        imageSrc="/images/photos/camille-27 - Grande.webp"
-                        imageAlt="Ostéopathie fonctionnelle"
-                        title={t('h2_functional')}
-                        description={t('text_functional')}
-                        layout="image-left"
-                        decorationPosition="bottom-left"
-                        decorationDelay="1s"
-                    />
-
-                    {/* Pathologies Traitées */}
-                    <FeatureBlock
-                        imageSrc="/images/photos/camille-28 - Grande.webp"
-                        imageAlt="Pathologies traitées"
-                        title={t('h2_pathologies')}
-                        description={t('text_pathologies')}
-                        layout="image-right"
-                        decorationPosition="top-left"
-                        decorationDelay="2s"
-                    />
-
-                    {/* Ostéopathie Biodynamique - Highlighted */}
-                    <section className="relative overflow-hidden">
-                        <div
-                            className="absolute inset-0 z-0 opacity-10"
-                            style={{
-                                backgroundImage: 'url(/images/photos/camille-38%20-%20Grande.jpeg)',
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
-                            }}
-                        ></div>
-                        <div className="relative z-10 gradient-subtle p-12 rounded-3xl shadow-glow">
-                            <div className="max-w-4xl mx-auto text-center">
-                                <h2 className="text-3xl md:text-4xl font-serif mb-8 text-primary">{t('h2_bio')}</h2>
-                                <p className="text-lg text-foreground/80 leading-relaxed whitespace-pre-line">
-                                    {t('text_bio')}
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* CTA Final */}
-                    <section className="text-center pt-0 pb-0">
-                        <h3 className="text-2xl font-serif mb-6 text-foreground">{t('cta_question')}</h3>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center px-10 py-4 rounded-full gradient-warm text-white font-bold text-lg shadow-lg hover:shadow-glow transition-smooth hover-scale tracking-wide"
-                        >
-                            {t('cta_button')}
-                        </Link>
-                    </section>
-                </div>
+      {/* Section À propos avec photo */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            {/* Photo professionnelle */}
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-3xl shadow-premium hover-scale transition-smooth">
+                <Image
+                  src="/images/photos/camille-24 - Grande.webp"
+                  alt="Camille Labasse - Ostéopathe"
+                  width={665}
+                  height={443}
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
+              </div>
+              {/* Floating decoration */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-float"></div>
+              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
             </div>
+
+            {/* Texte de bienvenue */}
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gradient">
+                {tHome('h2_welcome')}
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                {tHome('welcome')}
+              </p>
+              <div className="pt-4">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full px-8 py-4 h-auto border-2 border-primary/30 hover:border-primary transition-smooth animated-underline flex items-center justify-center"
+                >
+                  <Link href="/osteopathie" className="flex items-center">En savoir plus sur l&apos;ostéopathie</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Who is it for? - Interactive with SEO content */}
+      <WhoIsItFor />
+
+      {/* Why Consult? - Redesign moderne */}
+      <section className="py-24 relative">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gradient">{tHome('h2_why')}</h2>
+          <p className="text-center text-muted-foreground mb-16 text-lg">Des solutions pour vos maux du quotidien</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              'why_muscle',
+              'why_digestive',
+              'why_stress',
+              'why_tinnitus',
+              'why_women'
+            ].map((key, index) => (
+              <div
+                key={key}
+                className="group relative bg-card border-2 border-border/50 hover:border-primary/50 rounded-2xl p-8 shadow-sm hover:shadow-premium transition-smooth"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <span className="text-lg text-foreground leading-relaxed block">{tHome(key)}</span>
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 shimmer pointer-events-none"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Galerie visuelle */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gradient">Un cadre apaisant</h2>
+          <p className="text-center text-muted-foreground mb-16 text-lg">Mon cabinet à Lisbonne</p>
+
+          <LightboxGallery
+            images={[
+              'camille-04 - Grande.webp',
+              'camille-06 - Grande.webp',
+              'camille-07 - Grande.webp',
+              'camille-09 - Grande.webp',
+              'camille-22 - Grande.webp',
+              'camille-27 - Grande.webp',
+              'camille-28 - Grande.webp',
+              'camille-38 - Grande.webp'
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* CTA Final - Premium */}
+      <section className="py-32 relative overflow-hidden">
+        {/* Background with image optimisée */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/photos/camille-50 - Grande.webp"
+            alt="Cabinet Camille Labasse"
+            fill
+            quality={85}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/75 dark:bg-black/85 z-[1]"></div>
+        </div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">
+            Prêt à prendre soin de vous ?
+          </h2>
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+            Prenez rendez-vous dès maintenant pour une consultation personnalisée
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="gradient-warm hover:shadow-glow text-white rounded-full px-16 py-8 text-xl h-auto transition-smooth hover-scale shadow-premium"
+          >
+            <Link href="/contact">{tHome('h2_book')}</Link>
+          </Button>
+        </div>
+      </section>
         </div>
     );
 }
