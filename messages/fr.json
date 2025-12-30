@@ -152,5 +152,116 @@
     "refuse": "Refuser les cookies",
     "learnMore": "En savoir plus",
     "close": "Fermer"
+  },
+  "WhoIsItFor": {
+    "subtitle": "Pour toute la famille, à chaque étape de la vie",
+    "benefits_label": "Bénéfices",
+    "benefits_label_full": "Bénéfices de l'ostéopathie",
+    "conditions_label": "Conditions",
+    "conditions_label_full": "Conditions traitées",
+    "cta_text": "Prenez soin de votre santé dès aujourd'hui",
+    "cta_button": "Prendre rendez-vous",
+    "babies": {
+      "description": "L'ostéopathie accompagne les bébés et enfants dès les premiers jours de vie. Les techniques douces et adaptées aident à soulager les tensions liées à la naissance, favorisent un développement harmonieux et préviennent les troubles fonctionnels.",
+      "benefits": [
+        "Traitement des empreintes de l'accouchement et des tensions in-utero",
+        "Soulagement des coliques et troubles digestifs",
+        "Amélioration de la qualité du sommeil",
+        "Traitement des plagiocéphalies (tête plate)",
+        "Soutien lors des poussées dentaires"
+      ],
+      "conditions": [
+        "Troubles du sommeil et pleurs excessifs",
+        "Difficultés d'allaitement ou de succion",
+        "Reflux gastro-œsophagien et régurgitations",
+        "Torticolis et préférence à la rotation de la tête",
+        "Constipation, troubles de la marche"
+      ]
+    },
+    "adults": {
+      "description": "L'ostéopathie pour adultes et seniors offre une approche globale pour maintenir l'équilibre du corps, traiter les douleurs chroniques ou aiguës, et optimiser le bien-être au quotidien.",
+      "benefits": [
+        "Soulagement des douleurs musculo-squelettiques",
+        "Amélioration de la mobilité et de la posture",
+        "Régulation du système nerveux et gestion du stress",
+        "Prévention des troubles liés au vieillissement",
+        "Accompagnement des pathologies chroniques"
+      ],
+      "conditions": [
+        "Douleurs de dos, cervicales, lombaires",
+        "Maux de tête, migraines, céphalées de tension",
+        "Troubles digestifs et ballonnements",
+        "Fatigue chronique, insomnie, stress",
+        "Douleurs articulaires, arthrose, rhumatismes"
+      ]
+    },
+    "sports": {
+      "description": "L'ostéopathie sportive optimise les performances, prévient les blessures et accélère la récupération. Une approche essentielle pour les athlètes de tous niveaux.",
+      "benefits": [
+        "Optimisation de la performance physique",
+        "Prévention des blessures et récidives",
+        "Accélération de la récupération post-effort",
+        "Amélioration de l'amplitude articulaire",
+        "Rééquilibrage musculaire et postural"
+      ],
+      "conditions": [
+        "Tendinites, entorses, contractures",
+        "Douleurs articulaires et inflammations",
+        "Pubalgie, périostite, syndrome rotulien",
+        "Récupération post-traumatique ou chirurgicale",
+        "Préparation physique et optimisation gestuelle"
+      ]
+    },
+    "pregnant": {
+      "description": "L'ostéopathie accompagne les femmes enceintes tout au long de la grossesse et en post-partum. Des techniques douces pour un confort optimal pendant cette période de transformation.",
+      "benefits": [
+        "Soulagement des douleurs lombaires et pelviennes",
+        "Préparation du bassin pour l'accouchement",
+        "Amélioration de la circulation et réduction des œdèmes",
+        "Accompagnement post-partum et récupération",
+        "Régulation des troubles digestifs et respiratoires"
+      ],
+      "conditions": [
+        "Sciatiques, douleurs du bassin et pubalgies",
+        "Nausées, reflux, constipation",
+        "Troubles du sommeil et fatigue",
+        "Tensions musculaires et crampes",
+        "Accompagnement après césarienne ou épisiotomie"
+      ]
+    },
+    "chronic": {
+      "description": "L'ostéopathie offre un soutien complémentaire précieux pour les personnes atteintes de pathologies chroniques ou de handicaps, en adaptant les techniques aux besoins spécifiques de chacun.",
+      "benefits": [
+        "Amélioration du confort de vie au quotidien",
+        "Soulagement des douleurs chroniques",
+        "Maintien de la mobilité et de l'autonomie",
+        "Accompagnement des traitements médicaux",
+        "Approche globale et personnalisée"
+      ],
+      "conditions": [
+        "Fibromyalgie, maladies rhumatismales",
+        "Maladies auto-immunes (Crohn, sclérose en plaques)",
+        "Troubles neurologiques et handicaps moteurs",
+        "Pathologies respiratoires chroniques (asthme, BPCO)",
+        "Séquelles d'AVC, Parkinson, troubles dégénératifs"
+      ]
+    },
+    "pets": {
+      "description": "L'ostéopathie animale s'applique aux chiens et autres animaux de compagnie. Des techniques adaptées pour améliorer leur mobilité, soulager leurs douleurs et optimiser leur bien-être.",
+      "benefits": [
+        "Amélioration de la mobilité et de la souplesse",
+        "Soulagement des douleurs articulaires",
+        "Optimisation des performances (sport, travail)",
+        "Accompagnement du vieillissement",
+        "Prévention des troubles musculo-squelettiques"
+      ],
+      "conditions": [
+        "Boiteries, troubles de la marche",
+        "Arthrose, dysplasie, problèmes articulaires",
+        "Raideurs musculaires et tensions",
+        "Récupération post-traumatique ou chirurgicale",
+        "Troubles du comportement liés à la douleur"
+      ]
+    }
   }
 }

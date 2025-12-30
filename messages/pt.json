@@ -152,5 +152,116 @@
         "refuse": "Recusar cookies",
         "learnMore": "Saber mais",
         "close": "Fechar"
+    },
+    "WhoIsItFor": {
+        "subtitle": "Para toda a família, em cada etapa da vida",
+        "benefits_label": "Benefícios",
+        "benefits_label_full": "Benefícios da osteopatia",
+        "conditions_label": "Condições",
+        "conditions_label_full": "Condições tratadas",
+        "cta_text": "Cuide da sua saúde hoje mesmo",
+        "cta_button": "Marcar consulta",
+        "babies": {
+            "description": "A osteopatia acompanha bebés e crianças desde os primeiros dias de vida. As técnicas suaves e adaptadas ajudam a aliviar as tensões relacionadas com o nascimento, favorecem um desenvolvimento harmonioso e previnem perturbações funcionais.",
+            "benefits": [
+                "Tratamento das marcas do parto e tensões intra-uterinas",
+                "Alívio de cólicas e perturbações digestivas",
+                "Melhoria da qualidade do sono",
+                "Tratamento de plagiocefalia (cabeça achatada)",
+                "Apoio durante o nascimento dos dentes"
+            ],
+            "conditions": [
+                "Perturbações do sono e choro excessivo",
+                "Dificuldades na amamentação ou sucção",
+                "Refluxo gastroesofágico e regurgitações",
+                "Torcicolo e preferência na rotação da cabeça",
+                "Obstipação, perturbações da marcha"
+            ]
+        },
+        "adults": {
+            "description": "A osteopatia para adultos e idosos oferece uma abordagem global para manter o equilíbrio do corpo, tratar dores crónicas ou agudas e otimizar o bem-estar no dia a dia.",
+            "benefits": [
+                "Alívio de dores musculoesqueléticas",
+                "Melhoria da mobilidade e da postura",
+                "Regulação do sistema nervoso e gestão do stress",
+                "Prevenção de perturbações relacionadas com o envelhecimento",
+                "Acompanhamento de patologias crónicas"
+            ],
+            "conditions": [
+                "Dores nas costas, cervicais, lombares",
+                "Dores de cabeça, enxaquecas, cefaleias de tensão",
+                "Perturbações digestivas e inchaço abdominal",
+                "Fadiga crónica, insónia, stress",
+                "Dores articulares, artrose, reumatismo"
+            ]
+        },
+        "sports": {
+            "description": "A osteopatia desportiva otimiza o desempenho, previne lesões e acelera a recuperação. Uma abordagem essencial para atletas de todos os níveis.",
+            "benefits": [
+                "Otimização do desempenho físico",
+                "Prevenção de lesões e recidivas",
+                "Aceleração da recuperação pós-esforço",
+                "Melhoria da amplitude articular",
+                "Reequilíbrio muscular e postural"
+            ],
+            "conditions": [
+                "Tendinites, entorses, contraturas",
+                "Dores articulares e inflamações",
+                "Pubalgia, periostite, síndrome rotuliano",
+                "Recuperação pós-traumática ou cirúrgica",
+                "Preparação física e otimização gestual"
+            ]
+        },
+        "pregnant": {
+            "description": "A osteopatia acompanha as grávidas ao longo de toda a gravidez e no pós-parto. Técnicas suaves para um conforto ótimo durante este período de transformação.",
+            "benefits": [
+                "Alívio de dores lombares e pélvicas",
+                "Preparação da bacia para o parto",
+                "Melhoria da circulação e redução de edemas",
+                "Acompanhamento pós-parto e recuperação",
+                "Regulação de perturbações digestivas e respiratórias"
+            ],
+            "conditions": [
+                "Ciáticas, dores na bacia e pubalgias",
+                "Náuseas, refluxo, obstipação",
+                "Perturbações do sono e fadiga",
+                "Tensões musculares e cãibras",
+                "Acompanhamento após cesariana ou episiotomia"
+            ]
+        },
+        "chronic": {
+            "description": "A osteopatia oferece um apoio complementar valioso para pessoas com patologias crónicas ou deficiências, adaptando as técnicas às necessidades específicas de cada um.",
+            "benefits": [
+                "Melhoria do conforto de vida no dia a dia",
+                "Alívio de dores crónicas",
+                "Manutenção da mobilidade e autonomia",
+                "Acompanhamento dos tratamentos médicos",
+                "Abordagem global e personalizada"
+            ],
+            "conditions": [
+                "Fibromialgia, doenças reumáticas",
+                "Doenças autoimunes (Crohn, esclerose múltipla)",
+                "Perturbações neurológicas e deficiências motoras",
+                "Patologias respiratórias crónicas (asma, DPOC)",
+                "Sequelas de AVC, Parkinson, perturbações degenerativas"
+            ]
+        },
+        "pets": {
+            "description": "A osteopatia animal aplica-se a cães e outros animais de estimação. Técnicas adaptadas para melhorar a sua mobilidade, aliviar as suas dores e otimizar o seu bem-estar.",
+            "benefits": [
+                "Melhoria da mobilidade e flexibilidade",
+                "Alívio de dores articulares",
+                "Otimização do desempenho (desporto, trabalho)",
+                "Acompanhamento do envelhecimento",
+                "Prevenção de perturbações musculoesqueléticas"
+            ],
+            "conditions": [
+                "Coxeiras, perturbações da marcha",
+                "Artrose, displasia, problemas articulares",
+                "Rigidez muscular e tensões",
+                "Recuperação pós-traumática ou cirúrgica",
+                "Perturbações do comportamento relacionadas com a dor"
+            ]
+        }
     }
 }

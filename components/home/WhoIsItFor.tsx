@@ -14,6 +14,7 @@ interface CategoryContent {
 
 export default function WhoIsItFor() {
     const t = useTranslations('HomePage');
+    const tWho = useTranslations('WhoIsItFor');
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
     const categories = [
@@ -27,125 +28,37 @@ export default function WhoIsItFor() {
 
     // Contenu SEO détaillé pour chaque catégorie
     const getCategoryContent = (key: string): CategoryContent => {
-        const content: Record<string, CategoryContent> = {
-            who_babies: {
-                key: 'who_babies',
-                title: t('who_babies'),
-                description: "L'ostéopathie accompagne les bébés et enfants dès les premiers jours de vie. Les techniques douces et adaptées aident à soulager les tensions liées à la naissance, favorisent un développement harmonieux et préviennent les troubles fonctionnels.",
-                benefits: [
-                    "Traitement des empreintes de l'accouchement et des tensions in-utero",
-                    "Soulagement des coliques et troubles digestifs",
-                    "Amélioration de la qualité du sommeil",
-                    "Traitement des plagiocéphalies (tête plate)",
-                    "Soutien lors des poussées dentaires"
-                ],
-                conditions: [
-                    "Troubles du sommeil et pleurs excessifs",
-                    "Difficultés d'allaitement ou de succion",
-                    "Reflux gastro-œsophagien et régurgitations",
-                    "Torticolis et préférence à la rotation de la tête",
-                    "Constipation, troubles de la marche"
-                ]
-            },
-            who_adults: {
-                key: 'who_adults',
-                title: t('who_adults'),
-                description: "L'ostéopathie pour adultes et seniors offre une approche globale pour maintenir la mobilité, soulager les douleurs chroniques et améliorer la qualité de vie. Elle s'adapte aux besoins spécifiques de chaque âge et condition physique.",
-                benefits: [
-                    "Amélioration de la mobilité articulaire",
-                    "Réduction des douleurs chroniques",
-                    "Meilleure posture et équilibre",
-                    "Prévention des troubles liés à l'âge",
-                    "Renforcement du système immunitaire"
-                ],
-                conditions: [
-                    "Douleurs vertébrales (cervicalgies, lombalgies)",
-                    "Arthrose et raideurs articulaires",
-                    "Troubles de l'équilibre",
-                    "Maux de tête et migraines",
-                    "Fatigue chronique"
-                ]
-            },
-            who_sports: {
-                key: 'who_sports',
-                title: t('who_sports'),
-                description: "L'ostéopathie sportive optimise les performances, prévient les blessures et accélère la récupération. Elle s'adresse à tous les sportifs, du amateur au professionnel, en tenant compte des spécificités de chaque discipline.",
-                benefits: [
-                    "Optimisation de la performance sportive",
-                    "Prévention des blessures",
-                    "Récupération accélérée après l'effort",
-                    "Amélioration de la flexibilité et de l'amplitude",
-                    "Traitement et prévention des tendinites"
-                ],
-                conditions: [
-                    "Entorses et traumatismes sportifs",
-                    "Tendinites (épaule, coude, genou, cheville)",
-                    "Contractures et tensions musculaires",
-                    "Périostites et douleurs de croissance",
-                    "Préparation et récupération de compétition"
-                ]
-            },
-            who_pregnant: {
-                key: 'who_pregnant',
-                title: t('who_pregnant'),
-                description: "L'ostéopathie périnatale accompagne les femmes enceintes tout au long de la grossesse et après l'accouchement. Elle aide à soulager les inconforts liés aux changements du corps et prépare le bassin pour l'accouchement.",
-                benefits: [
-                    "Soulagement des douleurs lombaires et pelviennes",
-                    "Amélioration de la circulation sanguine",
-                    "Préparation du bassin pour l'accouchement",
-                    "Réduction des nausées et troubles digestifs",
-                    "Récupération post-partum optimale"
-                ],
-                conditions: [
-                    "Sciatiques et douleurs pelviennes",
-                    "Troubles digestifs de la grossesse",
-                    "Douleurs costales et difficultés respiratoires",
-                    "Œdèmes et circulation veineuse",
-                    "Récupération après césarienne ou épisiotomie",
-                    "Adhérences et douleurs de péridurale"
-                ]
-            },
-            who_chronic: {
-                key: 'who_chronic',
-                title: t('who_chronic'),
-                description: "L'ostéopathie offre une approche complémentaire dans la prise en charge des pathologies chroniques et handicaps. Elle vise à améliorer le confort de vie, réduire les symptômes et soutenir les capacités d'auto-régulation du corps.",
-                benefits: [
-                    "Réduction des douleurs chroniques",
-                    "Amélioration de la qualité de vie",
-                    "Soutien du système immunitaire",
-                    "Meilleure gestion du stress",
-                    "Complémentarité avec les traitements médicaux"
-                ],
-                conditions: [
-                    "Fibromyalgie et syndrome de fatigue chronique",
-                    "Maladies auto-immunes",
-                    "Troubles digestifs chroniques",
-                    "Migraines et céphalées récurrentes",
-                    "Pathologies rhumatismales"
-                ]
-            },
-            who_pets: {
-                key: 'who_pets',
-                title: t('who_pets'),
-                description: "L'ostéopathie peut soulager là où le vétérinaire est limité. Les techniques douces adaptées aux animaux permettent d'améliorer leur mobilité et leur bien-être général.",
-                benefits: [
-                    "Amélioration de la mobilité et du confort",
-                    "Soutien des capacités naturelles de guérison",
-                    "Approche complémentaire aux soins vétérinaires",
-                    "Techniques douces et non invasives",
-                    "Prévention des troubles chroniques"
-                ],
-                conditions: [
-                    "Boiterie et difficultés de locomotion",
-                    "Arthrose canine ou féline",
-                    "Entorses et autres traumatismes bénins",
-                    "Troubles digestifs",
-                    "État général"
-                ]
-            }
+        // Map HomePage keys to WhoIsItFor keys
+        const categoryMap: Record<string, string> = {
+            'who_babies': 'babies',
+            'who_adults': 'adults',
+            'who_sports': 'sports',
+            'who_pregnant': 'pregnant',
+            'who_chronic': 'chronic',
+            'who_pets': 'pets'
         };
 
-        return content[key] || content.who_adults;
+        const categoryKey = categoryMap[key] || 'adults';
+
+        return {
+            key: key,
+            title: t(key),
+            description: tWho(`${categoryKey}.description`),
+            benefits: Array.from({ length: 5 }, (_, i) => {
+                try {
+                    return tWho(`${categoryKey}.benefits.${i}`);
+                } catch {
+                    return '';
+                }
+            }).filter(Boolean),
+            conditions: Array.from({ length: 6 }, (_, i) => {
+                try {
+                    return tWho(`${categoryKey}.conditions.${i}`);
+                } catch {
+                    return '';
+                }
+            }).filter(Boolean)
+        };
     };
 
     const selectedContent = selectedCategory ? getCategoryContent(selectedCategory) : null;
@@ -158,7 +71,7 @@ export default function WhoIsItFor() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gradient">{t('h2_who')}</h2>
-                <p className="text-center text-muted-foreground mb-16 text-lg">Pour toute la famille, à chaque étape de la vie</p>
+                <p className="text-center text-muted-foreground mb-16 text-lg">{tWho('subtitle')}</p>
 
                 {/* Mobile View: Accordion */}
                 <div className="md:hidden space-y-4">
@@ -192,7 +105,7 @@ export default function WhoIsItFor() {
                                                 <div>
                                                     <h4 className="font-semibold mb-3 text-primary flex items-center gap-2 text-sm uppercase tracking-wider">
                                                         <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                                                        Bénéfices
+                                                        {tWho('benefits_label')}
                                                     </h4>
                                                     <ul className="space-y-2">
                                                         {content.benefits.map((benefit, idx) => (
@@ -207,7 +120,7 @@ export default function WhoIsItFor() {
                                                 <div>
                                                     <h4 className="font-semibold mb-3 text-primary flex items-center gap-2 text-sm uppercase tracking-wider">
                                                         <span className="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                                                        Conditions
+                                                        {tWho('conditions_label')}
                                                     </h4>
                                                     <ul className="space-y-2">
                                                         {content.conditions.map((condition, idx) => (
@@ -225,7 +138,7 @@ export default function WhoIsItFor() {
                                                     href="/contact"
                                                     className="inline-flex items-center justify-center px-8 py-3 rounded-full gradient-warm text-white font-medium text-sm shadow-lg w-full"
                                                 >
-                                                    Prendre rendez-vous
+                                                    {tWho('cta_button')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -308,7 +221,7 @@ export default function WhoIsItFor() {
                                     <div>
                                         <h4 className="text-xl font-semibold mb-4 text-primary flex items-center gap-2">
                                             <span className="w-2 h-2 bg-primary rounded-full"></span>
-                                            Bénéfices de l&apos;ostéopathie
+                                            {tWho('benefits_label_full')}
                                         </h4>
                                         <ul className="space-y-3">
                                             {selectedContent.benefits.map((benefit, idx) => (
@@ -324,7 +237,7 @@ export default function WhoIsItFor() {
                                     <div>
                                         <h4 className="text-xl font-semibold mb-4 text-primary flex items-center gap-2">
                                             <span className="w-2 h-2 bg-accent rounded-full"></span>
-                                            Conditions traitées
+                                            {tWho('conditions_label_full')}
                                         </h4>
                                         <ul className="space-y-3">
                                             {selectedContent.conditions.map((condition, idx) => (
@@ -340,13 +253,13 @@ export default function WhoIsItFor() {
                                 {/* CTA */}
                                 <div className="mt-8 pt-8 border-t border-border text-center">
                                     <p className="text-foreground font-medium mb-6 text-lg">
-                                        Prenez soin de votre santé dès aujourd&apos;hui
+                                        {tWho('cta_text')}
                                     </p>
                                     <Link
                                         href="/contact"
                                         className="inline-flex items-center justify-center px-10 py-4 rounded-full gradient-warm text-white font-bold text-lg shadow-lg hover:shadow-glow transition-smooth hover-scale tracking-wide"
                                     >
-                                        Prendre rendez-vous
+                                        {tWho('cta_button')}
                                     </Link>
                                 </div>
                             </div>
