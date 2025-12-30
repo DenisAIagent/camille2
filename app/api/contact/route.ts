@@ -264,7 +264,7 @@ export async function POST(request: NextRequest) {
 
         // Send email using Resend
         const resendApiKey = process.env.RESEND_API_KEY;
-        const contactEmail = process.env.CONTACT_EMAIL || 'contact@camille-osteopathe.com';
+        const contactEmail = process.env.CONTACT_EMAIL || 'camilleosteopatia@gmail.com';
 
         if (!resendApiKey) {
             // Development mode - don't log sensitive data
