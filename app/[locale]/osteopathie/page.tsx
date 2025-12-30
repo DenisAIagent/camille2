@@ -93,7 +93,7 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
             />
 
             {/* Hero Section avec image */}
-            <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden parallax-container">
+            <section className="relative min-h-[30vh] flex items-center justify-center overflow-hidden parallax-container">
                 <div
                     className="absolute inset-0 z-0"
                     style={{
