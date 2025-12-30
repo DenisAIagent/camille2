@@ -51,7 +51,7 @@ export default function WhoIsItFor() {
                     return '';
                 }
             }).filter(Boolean),
-            conditions: Array.from({ length: 6 }, (_, i) => {
+            conditions: Array.from({ length: 5 }, (_, i) => {
                 try {
                     return tWho(`${categoryKey}.conditions.${i}`);
                 } catch {
