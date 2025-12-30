@@ -151,7 +151,7 @@ export default function WhoIsItFor() {
     const selectedContent = selectedCategory ? getCategoryContent(selectedCategory) : null;
 
     return (
-        <section className="pt-12 pb-24 bg-gradient-subtle relative overflow-hidden">
+        <section className="pt-6 pb-24 bg-gradient-subtle relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
             <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
