@@ -124,7 +124,7 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
 
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gradient">{tHome('h2_why')}</h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">Des solutions pour vos maux du quotidien</p>
+          <p className="text-center text-muted-foreground mb-16 text-lg">{t('why_subtitle')}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               'why_muscle',
@@ -152,8 +152,8 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
       {/* Galerie visuelle */}
       <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gradient">Un cadre apaisant</h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">Mon cabinet à Lisbonne</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-center mb-4 text-gradient">{t('gallery_title')}</h2>
+          <p className="text-center text-muted-foreground mb-16 text-lg">{t('gallery_subtitle')}</p>
 
           <LightboxGallery
             images={[
@@ -187,10 +187,10 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-serif mb-6 text-white">
-            Prêt à prendre soin de vous ?
+            {t('cta_title')}
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Prenez rendez-vous dès maintenant pour une consultation personnalisée
+            {t('cta_subtitle')}
           </p>
           <Button
             asChild

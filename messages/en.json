@@ -42,7 +42,12 @@
         "h2_bio": "Camille's background",
         "text_bio": "Camille is an accredited and exclusive osteopath. She studied 5 years full time in France, within an education that meets the european standards of osteopathy. \n\nShe is specialized in functional techniques, also known as indirects and gentle. She keeps on studying ad learning with the best teachers, themselves pupils of the first generations of American and British osteopaths, in France: Pierre Tricot, Elisabeth Tissot, Pascal Anselin...",
         "cta_question": "Need a consultation?",
-        "cta_button": "Book an appointment"
+        "cta_button": "Book an appointment",
+        "why_subtitle": "Solutions for your everyday ailments",
+        "gallery_title": "A soothing setting",
+        "gallery_subtitle": "My practice in Lisbon",
+        "cta_title": "Ready to take care of yourself?",
+        "cta_subtitle": "Book your appointment now for personalized care"
     },
     "TraumaPage": {
         "h1": "Biodynamic osteopathy and trauma: a different somatic approach",

@@ -42,7 +42,12 @@
         "h2_bio": "O percurso de Camille",
         "text_bio": "Camille é osteopata exclusiva e certificada. Isso significa que estudou 5 anos numa escola certificada pelo Ministério da Saude francês, de acordo com os padrões europeus de formação em osteopatia. \n\nÉ especializada em técnicas ditas funcionais, indiretas e suaves. Continua a formar-se em formação contínua com os melhores professores da França: Pierre Tricot, Elisabeth Tissot, Pascal Anselin...",
         "cta_question": "Precisa de uma consulta?",
-        "cta_button": "Marcar consulta"
+        "cta_button": "Marcar consulta",
+        "why_subtitle": "Soluções para os seus problemas do dia a dia",
+        "gallery_title": "Um ambiente tranquilo",
+        "gallery_subtitle": "O meu consultório em Lisboa",
+        "cta_title": "Pronto para cuidar de si?",
+        "cta_subtitle": "Marque a sua consulta agora para um atendimento personalizado"
     },
     "TraumaPage": {
         "h1": "Osteopatia biodinâmica e trauma: uma abordagem somática diferente",
