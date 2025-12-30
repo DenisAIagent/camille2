@@ -4,6 +4,8 @@ import { Link } from "@/i18n/routing";
 
 export default function Footer({ locale }: { locale: string }) {
     const t = useTranslations("ContactPage");
+    const tFooter = useTranslations("Footer");
+    const tNav = useTranslations("Navigation");
 
     return (
         <footer className="relative bg-gradient-to-b from-muted/30 to-muted/50 border-t border-primary/10 py-16 mt-24 overflow-hidden" style={{ contentVisibility: 'auto', containIntrinsicSize: '600px' }}>
@@ -15,11 +17,11 @@ export default function Footer({ locale }: { locale: string }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Brand Section */}
                     <div className="space-y-4">
-                        <h3 className="font-serif text-lg font-medium mb-4 text-gradient">Camille Labasse ostéopathe D.O</h3>
+                        <h3 className="font-serif text-lg font-medium mb-4 text-gradient">{tFooter('brand_title')}</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Adultes, enfants, animaux domestiques<br />
-                            Approche du trauma<br />
-                            Lisbonne, Portugal
+                            {tFooter('brand_subtitle_1')}<br />
+                            {tFooter('brand_subtitle_2')}<br />
+                            {tFooter('brand_subtitle_3')}
                         </p>
                     </div>
 
@@ -66,7 +68,7 @@ export default function Footer({ locale }: { locale: string }) {
 
                     {/* Google Reviews Section */}
                     <div className="space-y-4">
-                        <h3 className="font-semibold text-lg mb-4 text-primary">Avis Clients</h3>
+                        <h3 className="font-semibold text-lg mb-4 text-primary">{tFooter('reviews_title')}</h3>
                         <a
                             href="https://maps.app.goo.gl/4UZom8xau583N1796"
                             target="_blank"
@@ -83,7 +85,7 @@ export default function Footer({ locale }: { locale: string }) {
 
                             {/* Review Count */}
                             <p className="text-sm text-muted-foreground mb-4">
-                                Basé sur 12 avis Google
+                                {tFooter('reviews_based')}
                             </p>
 
                             {/* Button */}
@@ -94,7 +96,7 @@ export default function Footer({ locale }: { locale: string }) {
                                     <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                                     <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                                 </svg>
-                                <span>Voir les avis</span>
+                                <span>{tFooter('reviews_button')}</span>
                             </div>
                         </a>
                     </div>
@@ -104,33 +106,33 @@ export default function Footer({ locale }: { locale: string }) {
                 <div className="border-t border-primary/10 pt-8 mb-8">
                     <div className="flex flex-wrap justify-center gap-6 text-sm">
                         <Link href="/" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            Accueil
+                            {tFooter('link_home')}
                         </Link>
                         <Link href="/osteopathie" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            Ostéopathie
+                            {tFooter('link_osteopathy')}
                         </Link>
                         <Link href="/trauma" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            Trauma
+                            {tFooter('link_trauma')}
                         </Link>
                         <Link href="/contact" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            Contact
+                            {tFooter('link_contact')}
                         </Link>
                         <Link href="/faq" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            FAQ
+                            {tFooter('link_faq')}
                         </Link>
                         <span className="text-muted-foreground/30">|</span>
                         <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            Confidentialité
+                            {tFooter('link_privacy')}
                         </Link>
                         <Link href="/legal" className="text-muted-foreground hover:text-primary transition-smooth animated-underline">
-                            Mentions légales
+                            {tFooter('link_legal')}
                         </Link>
                     </div>
                 </div>
 
                 {/* Copyright */}
                 <div className="text-center text-xs text-muted-foreground">
-                    <p>© {new Date().getFullYear()} Camille Labasse. Tous droits réservés.</p>
+                    <p>© {new Date().getFullYear()} Camille Labasse. {tFooter('copyright')}.</p>
                 </div>
             </div>
 

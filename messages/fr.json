@@ -153,6 +153,23 @@
     "learnMore": "En savoir plus",
     "close": "Fermer"
   },
+  "Footer": {
+    "brand_title": "Camille Labasse ostéopathe D.O",
+    "brand_subtitle_1": "Adultes, enfants, animaux domestiques",
+    "brand_subtitle_2": "Approche du trauma",
+    "brand_subtitle_3": "Lisbonne, Portugal",
+    "reviews_title": "Avis Clients",
+    "reviews_based": "Basé sur 12 avis Google",
+    "reviews_button": "Voir les avis",
+    "link_home": "Accueil",
+    "link_osteopathy": "Ostéopathie",
+    "link_trauma": "Trauma",
+    "link_contact": "Contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Confidentialité",
+    "link_legal": "Mentions légales",
+    "copyright": "Tous droits réservés"
+  },
   "WhoIsItFor": {
     "subtitle": "Pour toute la famille, à chaque étape de la vie",
     "benefits_label": "Bénéfices",

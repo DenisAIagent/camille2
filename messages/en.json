@@ -153,6 +153,23 @@
         "learnMore": "Learn more",
         "close": "Close"
     },
+    "Footer": {
+        "brand_title": "Camille Labasse osteopath D.O",
+        "brand_subtitle_1": "Adults, children, pets",
+        "brand_subtitle_2": "Trauma approach",
+        "brand_subtitle_3": "Lisbon, Portugal",
+        "reviews_title": "Client Reviews",
+        "reviews_based": "Based on 12 Google reviews",
+        "reviews_button": "See reviews",
+        "link_home": "Home",
+        "link_osteopathy": "Osteopathy",
+        "link_trauma": "Trauma",
+        "link_contact": "Contact",
+        "link_faq": "FAQ",
+        "link_privacy": "Privacy",
+        "link_legal": "Legal Notice",
+        "copyright": "All rights reserved"
+    },
     "WhoIsItFor": {
         "subtitle": "For the whole family, at every stage of life",
         "benefits_label": "Benefits",
