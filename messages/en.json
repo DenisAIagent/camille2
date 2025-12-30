@@ -18,14 +18,18 @@
         "who_adults": "Adults and seniors",
         "who_sports": "Athletes",
         "who_pregnant": "Pregnant women",
-        "who_chronic": "People with chronic conditions",
+        "who_chronic": "People with chronic conditions or disabilities",
+        "who_pets": "Dogs and pets",
         "h2_why": "Why consult?",
-        "why_muscle": "Musculoskeletal pain",
+        "why_muscle": "Musculoskeletal and neuralgic pain",
+        "why_tendinitis": "Tendinitis, inflammations",
         "why_digestive": "Digestive disorders",
         "why_stress": "Stress, fatigue, insomnia",
-        "why_tinnitus": "Tinnitus, vertigo, headaches",
+        "why_tinnitus": "Tinnitus, vertigo, migraines and headaches",
+        "why_emotional": "Pain of emotional and traumatic origin",
         "why_women": "Menstrual or genito-urinary disorders",
-        "h2_book": "Book an appointment"
+        "h2_book": "Book an appointment",
+        "learn_more_osteopathy": "Osteopathy: learn more"
     },
     "OsteopathyPage": {
         "h1": "Osteopathy: definition, indications and practice",

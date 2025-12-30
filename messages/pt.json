@@ -18,14 +18,18 @@
         "who_adults": "Adultos e idosos",
         "who_sports": "Desportistas",
         "who_pregnant": "Grávidas",
-        "who_chronic": "Pessoas com patologias crónicas",
+        "who_chronic": "Pessoas com patologias crónicas ou handicaps",
+        "who_pets": "Cães e animais de estimação",
         "h2_why": "Porquê consultar?",
-        "why_muscle": "Dores musculo-articulares",
+        "why_muscle": "Dores musculo-articulares e nevrálgicas",
+        "why_tendinitis": "Tendinites, inflamações",
         "why_digestive": "Distúrbios digestivos",
         "why_stress": "Stress, fadiga, insónias",
-        "why_tinnitus": "Zumbidos, vertigens, dores de cabeça",
+        "why_tinnitus": "Zumbidos, vertigens, enxaquecas e dores de cabeça",
+        "why_emotional": "Dores de origem emocional e traumática",
         "why_women": "Distúrbios menstruais ou genito-urinais",
-        "h2_book": "Marcar consulta"
+        "h2_book": "Marcar consulta",
+        "learn_more_osteopathy": "A osteopatia: saber mais"
     },
     "OsteopathyPage": {
         "h1": "A osteopatia: definição, indicações e prática",

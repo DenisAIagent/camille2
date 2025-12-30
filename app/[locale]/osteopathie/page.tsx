@@ -113,53 +113,6 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
                 </div>
             </section>
 
-      {/* Section À propos avec photo */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            {/* Photo professionnelle */}
-            <div className="relative group">
-              <div className="relative overflow-hidden rounded-3xl shadow-premium hover-scale transition-smooth">
-                <Image
-                  src="/images/photos/camille-24 - Grande.webp"
-                  alt="Camille Labasse - Ostéopathe"
-                  width={665}
-                  height={443}
-                  quality={75}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
-              </div>
-              {/* Floating decoration */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-float"></div>
-              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-            </div>
-
-            {/* Texte de bienvenue */}
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gradient">
-                {tHome('h2_welcome')}
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                {tHome('welcome')}
-              </p>
-              <div className="pt-4">
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-8 py-4 h-auto border-2 border-primary/30 hover:border-primary transition-smooth animated-underline flex items-center justify-center"
-                >
-                  <Link href="/osteopathie" className="flex items-center">En savoir plus sur l&apos;ostéopathie</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       {/* Who is it for? - Interactive with SEO content */}
       <WhoIsItFor />
 
@@ -175,9 +128,11 @@ export default async function OsteopathyPage({ params }: { params: Promise<{ loc
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               'why_muscle',
+              'why_tendinitis',
               'why_digestive',
               'why_stress',
               'why_tinnitus',
+              'why_emotional',
               'why_women'
             ].map((key, index) => (
               <div

@@ -18,14 +18,18 @@
     "who_adults": "Adultes et seniors",
     "who_sports": "Sportifs",
     "who_pregnant": "Femmes enceintes",
-    "who_chronic": "Personnes avec pathologies chroniques",
+    "who_chronic": "Personnes avec pathologies chroniques ou handicaps",
+    "who_pets": "Chiens et animaux de compagnie",
     "h2_why": "Pourquoi consulter ?",
-    "why_muscle": "Douleurs musculo-articulaires",
+    "why_muscle": "Douleurs musculo-articulaires et névralgiques",
+    "why_tendinitis": "Tendinites, inflammations",
     "why_digestive": "Troubles digestifs",
     "why_stress": "Stress, fatigue, insomnies",
-    "why_tinnitus": "Acouphènes, vertiges, migraines",
+    "why_tinnitus": "Acouphènes, vertiges, migraines et céphalées",
+    "why_emotional": "Douleurs d'origine émotionnelle et traumatique",
     "why_women": "Troubles menstruels ou génito-urinaires",
-    "h2_book": "Prendre rendez-vous"
+    "h2_book": "Prendre rendez-vous",
+    "learn_more_osteopathy": "L'ostéopathie : en savoir plus"
   },
   "OsteopathyPage": {
     "h1": "L’ostéopathie : définition, indications et pratique",

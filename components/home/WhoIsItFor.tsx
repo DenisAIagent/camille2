@@ -21,7 +21,8 @@ export default function WhoIsItFor() {
         'who_adults',
         'who_sports',
         'who_pregnant',
-        'who_chronic'
+        'who_chronic',
+        'who_pets'
     ];
 
     // Contenu SEO détaillé pour chaque catégorie
@@ -32,18 +33,18 @@ export default function WhoIsItFor() {
                 title: t('who_babies'),
                 description: "L'ostéopathie accompagne les bébés et enfants dès les premiers jours de vie. Les techniques douces et adaptées aident à soulager les tensions liées à la naissance, favorisent un développement harmonieux et préviennent les troubles fonctionnels.",
                 benefits: [
+                    "Traitement des empreintes de l'accouchement et des tensions in-utero",
                     "Soulagement des coliques et troubles digestifs",
                     "Amélioration de la qualité du sommeil",
                     "Traitement des plagiocéphalies (tête plate)",
-                    "Accompagnement du développement moteur",
                     "Soutien lors des poussées dentaires"
                 ],
                 conditions: [
                     "Troubles du sommeil et pleurs excessifs",
                     "Difficultés d'allaitement ou de succion",
-                    "Reflux gastro-œsophagien",
-                    "Torticolis congénital",
-                    "Retard de développement moteur"
+                    "Reflux gastro-œsophagien et régurgitations",
+                    "Torticolis et préférence à la rotation de la tête",
+                    "Constipation, troubles de la marche"
                 ]
             },
             who_adults: {
@@ -100,13 +101,14 @@ export default function WhoIsItFor() {
                     "Troubles digestifs de la grossesse",
                     "Douleurs costales et difficultés respiratoires",
                     "Œdèmes et circulation veineuse",
-                    "Récupération après césarienne ou épisiotomie"
+                    "Récupération après césarienne ou épisiotomie",
+                    "Adhérences et douleurs de péridurale"
                 ]
             },
             who_chronic: {
                 key: 'who_chronic',
                 title: t('who_chronic'),
-                description: "L'ostéopathie offre une approche complémentaire dans la prise en charge des pathologies chroniques. Elle vise à améliorer le confort de vie, réduire les symptômes et soutenir les capacités d'auto-régulation du corps.",
+                description: "L'ostéopathie offre une approche complémentaire dans la prise en charge des pathologies chroniques et handicaps. Elle vise à améliorer le confort de vie, réduire les symptômes et soutenir les capacités d'auto-régulation du corps.",
                 benefits: [
                     "Réduction des douleurs chroniques",
                     "Amélioration de la qualité de vie",
@@ -120,6 +122,25 @@ export default function WhoIsItFor() {
                     "Troubles digestifs chroniques",
                     "Migraines et céphalées récurrentes",
                     "Pathologies rhumatismales"
+                ]
+            },
+            who_pets: {
+                key: 'who_pets',
+                title: t('who_pets'),
+                description: "L'ostéopathie peut soulager là où le vétérinaire est limité. Les techniques douces adaptées aux animaux permettent d'améliorer leur mobilité et leur bien-être général.",
+                benefits: [
+                    "Amélioration de la mobilité et du confort",
+                    "Soutien des capacités naturelles de guérison",
+                    "Approche complémentaire aux soins vétérinaires",
+                    "Techniques douces et non invasives",
+                    "Prévention des troubles chroniques"
+                ],
+                conditions: [
+                    "Boiterie et difficultés de locomotion",
+                    "Arthrose canine ou féline",
+                    "Entorses et autres traumatismes bénins",
+                    "Troubles digestifs",
+                    "État général"
                 ]
             }
         };

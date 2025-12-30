@@ -137,20 +137,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed max-w-3xl mx-auto mb-12 drop-shadow">
               {t('intro')}
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 items-center w-full px-4 sm:px-0">
+            <div className="flex justify-center">
               <Button
                 asChild
                 size="lg"
                 className="gradient-warm hover:shadow-glow text-white rounded-full px-8 sm:px-12 py-6 sm:py-7 text-base sm:text-lg h-auto transition-smooth hover-scale shadow-premium w-full sm:w-auto whitespace-normal text-center leading-tight"
               >
                 <Link href="/contact">{t('h2_book')}</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                className="bg-transparent border-2 border-[#6a6546] text-[#6a6546] hover:bg-[#6a6546] hover:text-white dark:border-[#D3D6C3] dark:text-[#D3D6C3] dark:hover:bg-[#D3D6C3] dark:hover:text-[#2A2C25] rounded-full px-8 sm:px-12 py-6 sm:py-7 text-base sm:text-lg h-auto transition-smooth hover-scale shadow-premium w-full sm:w-auto whitespace-normal text-center leading-tight"
-              >
-                <Link href="/osteopathie">{t('h2_osteopathy')}</Link>
               </Button>
             </div>
           </div>
@@ -160,6 +153,42 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="absolute bottom-0 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
           <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-primary rounded-full animate-float"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section À propos avec photo */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            {/* Photo professionnelle */}
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-3xl shadow-premium hover-scale transition-smooth">
+                <Image
+                  src="/images/photos/camille-24 - Grande.webp"
+                  alt="Camille Labasse - Ostéopathe"
+                  width={665}
+                  height={443}
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
+              </div>
+              {/* Floating decoration */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-float"></div>
+              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+            </div>
+
+            {/* Texte de bienvenue */}
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-serif mb-6 text-gradient">
+                {t('h2_welcome')}
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                {t('welcome')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -222,12 +251,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           {/* CTA Final */}
           <section className="text-center pt-0 pb-0">
             <h3 className="text-2xl font-serif mb-6 text-foreground">{tOsteo('cta_question')}</h3>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 rounded-full gradient-warm text-white font-bold text-lg shadow-lg hover:shadow-glow transition-smooth hover-scale tracking-wide"
-            >
-              {tOsteo('cta_button')}
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-10 py-4 rounded-full gradient-warm text-white font-bold text-lg shadow-lg hover:shadow-glow transition-smooth hover-scale tracking-wide"
+              >
+                {tOsteo('cta_button')}
+              </Link>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 py-4 h-auto border-2 border-primary/30 hover:border-primary transition-smooth animated-underline"
+              >
+                <Link href="/osteopathie">{t('learn_more_osteopathy')}</Link>
+              </Button>
+            </div>
           </section>
         </div>
       </div>
