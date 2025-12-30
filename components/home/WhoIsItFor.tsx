@@ -239,7 +239,7 @@ export default function WhoIsItFor() {
                 {/* Desktop View: Tabs */}
                 <div className="hidden md:block">
                     {/* Cards Grid */}
-                    <div className="grid grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {categories.map((key, index) => (
                             <button
                                 key={key}
