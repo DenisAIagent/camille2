@@ -83,7 +83,11 @@
         "form_name": "Nome",
         "form_email": "Email",
         "form_message": "Mensagem",
-        "form_submit": "Enviar"
+        "form_submit": "Enviar",
+        "form_sending": "A enviar...",
+        "form_success": "Mensagem enviada com sucesso!",
+        "form_error": "Erro ao enviar mensagem",
+        "form_error_desc": "Por favor, tente novamente ou contacte-nos por telefone."
     },
     "Contact": {
         "email": "camille@osteopathe-lisbonne.com",
