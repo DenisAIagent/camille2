@@ -160,6 +160,13 @@ export default async function TraumaPage({ params }: { params: Promise<{ locale:
                         </div>
                     </section>
 
+                    {/* Disclaimer Section */}
+                    <section className="max-w-4xl mx-auto">
+                        <p className="text-sm text-muted-foreground italic leading-relaxed text-center">
+                            {t('disclaimer')}
+                        </p>
+                    </section>
+
                     {/* CTA Final */}
                     <section className="text-center pt-0 pb-0">
                         <h3 className="text-2xl font-serif mb-6 text-foreground">{t('cta_question')}</h3>
