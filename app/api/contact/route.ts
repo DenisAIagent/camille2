@@ -215,13 +215,13 @@ export async function POST(request: NextRequest) {
 
         const { name, email, message, captchaToken } = validationResult.data;
 
-        // Verify hCaptcha token with timeout
-        const hcaptchaSecret = process.env.HCAPTCHA_SECRET_KEY;
+        // Verify reCAPTCHA token with timeout
+        const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
 
-        if (!hcaptchaSecret) {
+        if (!recaptchaSecret) {
             // Log error without exposing to client
             if (process.env.NODE_ENV === 'development') {
-                console.error('[DEV] HCAPTCHA_SECRET_KEY is not configured');
+                console.error('[DEV] RECAPTCHA_SECRET_KEY is not configured');
             }
             return NextResponse.json(
                 { error: 'Server configuration error' },
@@ -232,20 +232,20 @@ export async function POST(request: NextRequest) {
         let verifyResponse;
         try {
             verifyResponse = await fetchWithTimeout(
-                'https://hcaptcha.com/siteverify',
+                'https://www.google.com/recaptcha/api/siteverify',
                 {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: `secret=${hcaptchaSecret}&response=${captchaToken}`,
+                    body: `secret=${recaptchaSecret}&response=${captchaToken}`,
                 },
                 10000 // 10 second timeout
             );
         } catch (error) {
             // Don't log sensitive data in production
             if (process.env.NODE_ENV === 'development') {
-                console.error('[DEV] hCaptcha verification timeout or error:', error);
+                console.error('[DEV] reCAPTCHA verification timeout or error:', error);
             }
             return NextResponse.json(
                 { error: 'Captcha verification failed' },
@@ -258,7 +258,7 @@ export async function POST(request: NextRequest) {
         if (!verifyData.success) {
             // Log error codes in development for debugging
             if (process.env.NODE_ENV === 'development') {
-                console.error('[DEV] hCaptcha verification failed:', verifyData);
+                console.error('[DEV] reCAPTCHA verification failed:', verifyData);
             }
             return NextResponse.json(
                 {

@@ -18,7 +18,7 @@ import {
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
-import HCaptcha from "@/components/ui/HCaptcha";
+import ReCaptcha from "@/components/ui/ReCaptcha";
 
 interface ContactFormProps {
     onSuccess?: () => void;
@@ -156,7 +156,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 </Button>
 
                 <div className="pt-4">
-                    <HCaptcha
+                    <ReCaptcha
                         onVerify={(token) => setCaptchaToken(token)}
                         onExpire={() => setCaptchaToken(null)}
                         onError={() => {
