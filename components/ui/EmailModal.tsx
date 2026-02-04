@@ -2,8 +2,8 @@
 
 import { X, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useState, FormEvent, useRef } from 'react';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { useState, FormEvent, useEffect } from 'react';
+import ReCaptchaV3 from '@/components/ui/ReCaptcha';
 
 interface EmailModalProps {
     isOpen: boolean;
@@ -18,29 +18,33 @@ export default function EmailModal({ isOpen, onClose }: EmailModalProps) {
         message: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'captcha_required'>('idle');
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState<string>('');
     const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-    const captchaRef = useRef<HCaptcha>(null);
 
-    const hcaptchaSiteKey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
-    const isHCaptchaConfigured = Boolean(hcaptchaSiteKey);
+    const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    const isRecaptchaConfigured = Boolean(recaptchaSiteKey);
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-
-        // Client-side validation: Captcha required
-        if (isHCaptchaConfigured && !captchaToken) {
-            setSubmitStatus('captcha_required');
-            setErrorMessage(t('captchaRequired') || 'Veuillez valider le captcha');
-            return;
-        }
 
         setIsSubmitting(true);
         setSubmitStatus('idle');
         setErrorMessage('');
 
         try {
+            // Execute reCAPTCHA v3 before submitting
+            let token: string;
+            try {
+                token = await (window as any).executeRecaptcha('email_modal');
+            } catch (error) {
+                console.error('reCAPTCHA execution failed:', error);
+                setSubmitStatus('error');
+                setErrorMessage('Erreur de vérification captcha. Veuillez réessayer.');
+                setIsSubmitting(false);
+                return;
+            }
+
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -48,7 +52,7 @@ export default function EmailModal({ isOpen, onClose }: EmailModalProps) {
                 },
                 body: JSON.stringify({
                     ...formData,
-                    captchaToken
+                    captchaToken: token
                 }),
             });
 
@@ -69,7 +73,6 @@ export default function EmailModal({ isOpen, onClose }: EmailModalProps) {
             setFormData({ name: '', email: '', message: '' });
             setCaptchaToken(null);
             setErrorMessage('');
-            captchaRef.current?.resetCaptcha();
 
             // Close modal after 2 seconds on success
             setTimeout(() => {
@@ -84,19 +87,11 @@ export default function EmailModal({ isOpen, onClose }: EmailModalProps) {
             setSubmitStatus('error');
             setErrorMessage(error.message || t('error') || 'Une erreur est survenue');
             setCaptchaToken(null);
-            captchaRef.current?.resetCaptcha();
         } finally {
             setIsSubmitting(false);
         }
     };
 
-    const onCaptchaVerify = (token: string) => {
-        setCaptchaToken(token);
-    };
-
-    const onCaptchaExpire = () => {
-        setCaptchaToken(null);
-    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData(prev => ({
@@ -194,31 +189,19 @@ export default function EmailModal({ isOpen, onClose }: EmailModalProps) {
                                     />
                                 </div>
 
-                                {/* hCaptcha */}
-                                {isHCaptchaConfigured ? (
-                                    <div className={`flex flex-col items-center py-2 ${submitStatus === 'captcha_required' ? 'ring-2 ring-red-500 rounded-lg p-2' : ''}`}>
-                                        <HCaptcha
-                                            ref={captchaRef}
-                                            sitekey={hcaptchaSiteKey!}
-                                            onVerify={onCaptchaVerify}
-                                            onExpire={onCaptchaExpire}
-                                        />
-                                        {submitStatus === 'captcha_required' && (
-                                            <p className="text-sm text-red-600 mt-2 animate-fade-in">
-                                                {errorMessage}
-                                            </p>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <div className="p-4 bg-yellow-50 dark:bg-yellow-900/30 border-2 border-yellow-200 dark:border-yellow-700 rounded-lg text-sm text-yellow-800 dark:text-yellow-200">
-                                        ⚠️ hCaptcha non configuré. Ajoutez NEXT_PUBLIC_HCAPTCHA_SITE_KEY à votre .env.local
-                                    </div>
-                                )}
+                                {/* reCAPTCHA v3 - Invisible */}
+                                <ReCaptchaV3
+                                    onVerify={(token) => setCaptchaToken(token)}
+                                    onError={() => {
+                                        console.error('reCAPTCHA loading error');
+                                    }}
+                                    action="email_modal"
+                                />
 
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    disabled={isSubmitting || (isHCaptchaConfigured && !captchaToken)}
+                                    disabled={isSubmitting}
                                     className="w-full flex items-center justify-center gap-3 px-6 py-4 gradient-warm text-white rounded-xl font-medium transition-all hover:shadow-glow hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
                                 >
                                     <Send className="w-5 h-5" />
