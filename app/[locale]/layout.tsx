@@ -55,15 +55,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = titles[locale as keyof typeof titles] || titles.fr;
   const description = descriptions[locale as keyof typeof descriptions] || descriptions.fr;
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://camilleosteopatia.com';
+
   return {
     title: {
       default: title,
       template: `%s | Camille Labasse Ostéopathe`
     },
     description,
-    metadataBase: new URL(process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+    metadataBase: new URL(siteUrl),
     alternates: {
       languages: {
         'fr': '/fr',
@@ -77,12 +77,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'Camille Labasse Ostéopathe',
       locale: locale,
       type: 'website',
+      url: `${siteUrl}/${locale}`,
       images: [
         {
-          url: '/opengraph-image.jpg',
+          url: `${siteUrl}/opengraph-image.jpg`,
           width: 1200,
           height: 630,
           alt: 'Camille Labasse Ostéopathe - Cabinet à Lisbonne',
+          type: 'image/jpeg',
         },
       ],
     },
