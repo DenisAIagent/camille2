@@ -47,7 +47,7 @@ const translations: Record<string, LocalizedContent> = {
     dateLabel: 'Date',
     timeLabel: 'Heure',
     locationLabel: 'Lieu',
-    location: 'Avenida de Roma, 1000-260 Lisboa, Portugal',
+    location: 'Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa, Portugal',
     addToCalendar: '📅 Ajouter à mon agenda',
     recommendationsTitle: 'Recommandations pour une séance optimale',
     recommendations: [
@@ -83,7 +83,7 @@ const translations: Record<string, LocalizedContent> = {
     contactText: 'N\'hésitez pas à nous contacter si vous avez des questions avant votre rendez-vous.',
     closing: 'Au plaisir de vous recevoir,',
     signature: 'Camille Labasse D.O.<br>Ostéopathe',
-    footerText: 'Cabinet d\'Ostéopathie - Avenida de Roma, 1000-260 Lisboa, Portugal'
+    footerText: 'Cabinet d\'Ostéopathie - Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa, Portugal'
   },
   pt: {
     subject: 'A sua consulta está confirmada ✅',
@@ -93,7 +93,7 @@ const translations: Record<string, LocalizedContent> = {
     dateLabel: 'Data',
     timeLabel: 'Hora',
     locationLabel: 'Local',
-    location: 'Avenida de Roma, 1000-260 Lisboa, Portugal',
+    location: 'Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa, Portugal',
     addToCalendar: '📅 Adicionar à minha agenda',
     recommendationsTitle: 'Recomendações para uma sessão ideal',
     recommendations: [
@@ -129,7 +129,7 @@ const translations: Record<string, LocalizedContent> = {
     contactText: 'Não hesite em contactar-me se tiver alguma dúvida antes da sua consulta.',
     closing: 'Até breve,',
     signature: 'Camille Labasse D.O.<br>Osteopata',
-    footerText: 'Consultório de Osteopatia - Avenida de Roma, 1000-260 Lisboa, Portugal'
+    footerText: 'Consultório de Osteopatia - Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa, Portugal'
   },
   en: {
     subject: 'Your appointment is confirmed ✅',
@@ -139,7 +139,7 @@ const translations: Record<string, LocalizedContent> = {
     dateLabel: 'Date',
     timeLabel: 'Time',
     locationLabel: 'Location',
-    location: 'Avenida de Roma, 1000-260 Lisbon, Portugal',
+    location: 'Rua Rodrigues Sampaio n76, 1st floor, 1150-279 Lisbon, Portugal',
     addToCalendar: '📅 Add to my calendar',
     recommendationsTitle: 'Recommendations for an optimal session',
     recommendations: [
@@ -175,7 +175,7 @@ const translations: Record<string, LocalizedContent> = {
     contactText: 'Feel free to contact us if you have any questions before your appointment.',
     closing: 'Looking forward to seeing you,',
     signature: 'Camille Labasse D.O.<br>Osteopath',
-    footerText: 'Osteopathy Practice - Avenida de Roma, 1000-260 Lisbon, Portugal'
+    footerText: 'Osteopathy Practice - Rua Rodrigues Sampaio n76, 1st floor, 1150-279 Lisbon, Portugal'
   }
 }
 

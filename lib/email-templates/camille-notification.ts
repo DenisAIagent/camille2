@@ -170,7 +170,7 @@ export function getCamilleNotificationEmail(details: AppointmentDetails): string
             <td style="background-color: #f9fafb; padding: 20px 30px; border-top: 1px solid #e5e7eb;">
               <p style="margin: 0; color: #9ca3af; font-size: 12px; text-align: center; line-height: 1.5;">
                 Cet email a été envoyé automatiquement depuis votre site de réservation.<br>
-                Cabinet d'Ostéopathie - Avenida de Roma, 1000-260 Lisboa, Portugal
+                Cabinet d'Ostéopathie - Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa, Portugal
               </p>
             </td>
           </tr>

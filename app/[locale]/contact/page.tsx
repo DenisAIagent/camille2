@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: titles[locale as keyof typeof titles] || titles.fr,
         description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,
         keywords: locale === 'fr'
-            ? 'ostéopathe Lisbonne, contact ostéopathe, rendez-vous ostéopathie, Camille Labasse, Avenida de Roma, tarif ostéopathie, ostéopathe francophone Portugal'
+            ? 'ostéopathe Lisbonne, contact ostéopathe, rendez-vous ostéopathie, Camille Labasse, Rua Rodrigues Sampaio, tarif ostéopathie, ostéopathe francophone Portugal'
             : locale === 'pt'
-                ? 'osteopata Lisboa, contacto osteopata, marcar consulta osteopatia, Camille Labasse, Avenida de Roma, preço osteopatia, osteopata francês Portugal'
-                : 'osteopath Lisbon, contact osteopath, book osteopathy appointment, Camille Labasse, Avenida de Roma, osteopathy price, French osteopath Portugal',
+                ? 'osteopata Lisboa, contacto osteopata, marcar consulta osteopatia, Camille Labasse, Rua Rodrigues Sampaio, preço osteopatia, osteopata francês Portugal'
+                : 'osteopath Lisbon, contact osteopath, book osteopathy appointment, Camille Labasse, Rua Rodrigues Sampaio, osteopathy price, French osteopath Portugal',
         openGraph: {
             title: titles[locale as keyof typeof titles] || titles.fr,
             description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,

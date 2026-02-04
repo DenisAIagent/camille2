@@ -158,9 +158,9 @@ export default function Footer({ locale }: { locale: string }) {
                         "priceRange": "60€-100€",
                         "address": {
                             "@type": "PostalAddress",
-                            "streetAddress": "Avenida de Roma",
+                            "streetAddress": "Rua Rodrigues Sampaio n76, 1º andar",
                             "addressLocality": "Lisboa",
-                            "postalCode": "1000-000",
+                            "postalCode": "1150-279",
                             "addressCountry": "PT"
                         },
                         "geo": {

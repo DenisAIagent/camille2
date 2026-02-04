@@ -17,19 +17,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 
     const descriptions = {
-        fr: 'Cabinet d\'ostéopathie à Lisbonne (Avenida de Roma). Approche douce et biodynamique pour bébés, adultes et femmes enceintes. Traitement des douleurs, stress et troubles fonctionnels.',
-        pt: 'Consultório de osteopatia em Lisboa (Avenida de Roma). Abordagem suave e biodinâmica para bebés, adultos e grávidas. Tratamento de dores, stress e distúrbios funcionais.',
-        en: 'Osteopathy practice in Lisbon (Avenida de Roma). Gentle biodynamic approach for babies, adults and pregnant women. Treatment of pain, stress and functional disorders.'
+        fr: 'Cabinet d\'ostéopathie à Lisbonne (Rua Rodrigues Sampaio n76). Approche douce et biodynamique pour bébés, adultes et femmes enceintes. Traitement des douleurs, stress et troubles fonctionnels.',
+        pt: 'Consultório de osteopatia em Lisboa (Rua Rodrigues Sampaio n76). Abordagem suave e biodinâmica para bebés, adultos e grávidas. Tratamento de dores, stress e distúrbios funcionais.',
+        en: 'Osteopathy practice in Lisbon (Rua Rodrigues Sampaio n76). Gentle biodynamic approach for babies, adults and pregnant women. Treatment of pain, stress and functional disorders.'
     };
 
     return {
         title: titles[locale as keyof typeof titles] || titles.fr,
         description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,
         keywords: locale === 'fr'
-            ? 'ostéopathe Lisbonne, ostéopathie biodynamique, ostéopathie bébé Lisbonne, mal de dos, urgence ostéopathe, Camille Labasse, Avenida de Roma'
+            ? 'ostéopathe Lisbonne, ostéopathie biodynamique, ostéopathie bébé Lisbonne, mal de dos, urgence ostéopathe, Camille Labasse, Rua Rodrigues Sampaio'
             : locale === 'pt'
-                ? 'osteopata Lisboa, osteopatia biodinâmica, osteopatia bebé Lisboa, dor nas costas, urgência osteopata, Camille Labasse, Avenida de Roma'
-                : 'osteopath Lisbon, biodynamic osteopathy, baby osteopath Lisbon, back pain, emergency osteopath, Camille Labasse, Avenida de Roma',
+                ? 'osteopata Lisboa, osteopatia biodinâmica, osteopatia bebé Lisboa, dor nas costas, urgência osteopata, Camille Labasse, Rua Rodrigues Sampaio'
+                : 'osteopath Lisbon, biodynamic osteopathy, baby osteopath Lisbon, back pain, emergency osteopath, Camille Labasse, Rua Rodrigues Sampaio',
         openGraph: {
             title: titles[locale as keyof typeof titles] || titles.fr,
             description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,

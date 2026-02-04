@@ -14,19 +14,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 
     const descriptions = {
-        fr: 'Spécialiste en libération des traumatismes à Lisbonne. Approche somatique et biodynamique pour traiter stress post-traumatique, anxiété et chocs émotionnels. Cabinet à Avenida de Roma.',
-        pt: 'Especialista em libertação de traumas em Lisboa. Abordagem somática e biodinâmica para tratar stress pós-traumático, ansiedade e choques emocionais. Consultório na Avenida de Roma.',
-        en: 'Trauma release specialist in Lisbon. Somatic and biodynamic approach to treat post-traumatic stress, anxiety and emotional shocks. Practice at Avenida de Roma.'
+        fr: 'Spécialiste en libération des traumatismes à Lisbonne. Approche somatique et biodynamique pour traiter stress post-traumatique, anxiété et chocs émotionnels. Cabinet Rua Rodrigues Sampaio n76.',
+        pt: 'Especialista em libertação de traumas em Lisboa. Abordagem somática e biodinâmica para tratar stress pós-traumático, ansiedade e choques emocionais. Consultório Rua Rodrigues Sampaio n76.',
+        en: 'Trauma release specialist in Lisbon. Somatic and biodynamic approach to treat post-traumatic stress, anxiety and emotional shocks. Practice at Rua Rodrigues Sampaio n76.'
     };
 
     return {
         title: titles[locale as keyof typeof titles] || titles.fr,
         description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,
         keywords: locale === 'fr'
-            ? 'thérapie trauma Lisbonne, ostéopathie somatique, somatic experiencing, stress post-traumatique, guérison émotionnelle, Camille Labasse, Avenida de Roma'
+            ? 'thérapie trauma Lisbonne, ostéopathie somatique, somatic experiencing, stress post-traumatique, guérison émotionnelle, Camille Labasse, Rua Rodrigues Sampaio'
             : locale === 'pt'
-                ? 'terapia trauma Lisboa, osteopatia somática, somatic experiencing, stress pós-traumático, cura emocional, Camille Labasse, Avenida de Roma'
-                : 'trauma therapy Lisbon, somatic osteopathy, somatic experiencing, post-traumatic stress, emotional healing, Camille Labasse, Avenida de Roma',
+                ? 'terapia trauma Lisboa, osteopatia somática, somatic experiencing, stress pós-traumático, cura emocional, Camille Labasse, Rua Rodrigues Sampaio'
+                : 'trauma therapy Lisbon, somatic osteopathy, somatic experiencing, post-traumatic stress, emotional healing, Camille Labasse, Rua Rodrigues Sampaio',
         openGraph: {
             title: titles[locale as keyof typeof titles] || titles.fr,
             description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,

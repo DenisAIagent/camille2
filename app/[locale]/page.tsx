@@ -17,19 +17,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 
   const descriptions = {
-    fr: 'Camille Labasse, Ostéopathe D.O. à Lisbonne (Avenida de Roma). Ostéopathie biodynamique, pédiatrique et traitement des traumatismes. Prenez rendez-vous en ligne.',
-    pt: 'Camille Labasse, Osteopata D.O. em Lisboa (Avenida de Roma). Osteopatia biodinâmica, pediátrica e tratamento de traumas. Marque a sua consulta online.',
-    en: 'Camille Labasse, Osteopath D.O. in Lisbon (Avenida de Roma). Biodynamic osteopathy, pediatric care and trauma treatment. Book your appointment online.'
+    fr: 'Camille Labasse, Ostéopathe D.O. à Lisbonne (Rua Rodrigues Sampaio n76). Ostéopathie biodynamique, pédiatrique et traitement des traumatismes. Prenez rendez-vous en ligne.',
+    pt: 'Camille Labasse, Osteopata D.O. em Lisboa (Rua Rodrigues Sampaio n76). Osteopatia biodinâmica, pediátrica e tratamento de traumas. Marque a sua consulta online.',
+    en: 'Camille Labasse, Osteopath D.O. in Lisbon (Rua Rodrigues Sampaio n76). Biodynamic osteopathy, pediatric care and trauma treatment. Book your appointment online.'
   };
 
   return {
     title: titles[locale as keyof typeof titles] || titles.fr,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.fr,
     keywords: locale === 'fr'
-      ? 'ostéopathe Lisbonne, ostéopathe français Lisbonne, ostéopathie biodynamique, urgence ostéopathe, Camille Labasse, Avenida de Roma'
+      ? 'ostéopathe Lisbonne, ostéopathe français Lisbonne, ostéopathie biodynamique, urgence ostéopathe, Camille Labasse, Rua Rodrigues Sampaio'
       : locale === 'pt'
-        ? 'osteopata Lisboa, osteopata francês Lisboa, osteopatia biodinâmica, urgência osteopata, Camille Labasse, Avenida de Roma'
-        : 'osteopath Lisbon, french osteopath Lisbon, biodynamic osteopathy, emergency osteopath, Camille Labasse, Avenida de Roma',
+        ? 'osteopata Lisboa, osteopata francês Lisboa, osteopatia biodinâmica, urgência osteopata, Camille Labasse, Rua Rodrigues Sampaio'
+        : 'osteopath Lisbon, french osteopath Lisbon, biodynamic osteopathy, emergency osteopath, Camille Labasse, Rua Rodrigues Sampaio',
     authors: [{ name: 'Camille Labasse' }],
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.fr,
@@ -80,9 +80,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             "telephone": "+351930505939",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Avenida de Roma",
+              "streetAddress": "Rua Rodrigues Sampaio n76, 1º andar",
               "addressLocality": "Lisboa",
-              "postalCode": "1000-000", // À ajuster
+              "postalCode": "1150-279",
               "addressCountry": "PT"
             },
             "geo": {

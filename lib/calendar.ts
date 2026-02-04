@@ -137,13 +137,13 @@ export function createCamilleCalendarEvent(
     `Email: ${patientEmail}`,
     notes ? `Notes: ${notes}` : '',
     '',
-    'Consultation ostéopathique - Avenida de Roma, Lisboa'
+    'Consultation ostéopathique - Rua Rodrigues Sampaio n76, Lisboa'
   ].filter(Boolean).join('\n')
 
   return {
     title: `Consultation - ${patientName}`,
     description,
-    location: 'Avenida de Roma, 1000-260 Lisboa, Portugal',
+    location: 'Rua Rodrigues Sampaio n76, 1150-279 Lisboa, Portugal',
     startDate,
     endDate,
     organizerEmail: process.env.CONTACT_EMAIL || 'camilleosteopatia@gmail.com',
@@ -180,15 +180,15 @@ export function createPatientCalendarEvent(
   }
 
   const descriptions = {
-    fr: `Consultation d'ostéopathie avec Camille Labasse D.O.\n\nRecommandations:\n- Portez des vêtements confortables\n- Hydratez-vous bien avant et après la séance\n- Évitez les repas copieux 1h avant\n- Arrivez 5 minutes en avance\n- Apportez vos examens médicaux si pertinent\n\nTél: +351 XXX XXX XXX\nAdresse: Avenida de Roma, 1000-260 Lisboa`,
-    pt: `Consulta de osteopatia com Camille Labasse D.O.\n\nRecomendações:\n- Use roupas confortáveis\n- Hidrate-se bem antes e depois da sessão\n- Evite refeições pesadas 1h antes\n- Chegue 5 minutos mais cedo\n- Traga seus exames médicos se relevante\n\nTel: +351 XXX XXX XXX\nEndereço: Avenida de Roma, 1000-260 Lisboa`,
-    en: `Osteopathy consultation with Camille Labasse D.O.\n\nRecommendations:\n- Wear comfortable clothing\n- Hydrate well before and after the session\n- Avoid heavy meals 1h before\n- Arrive 5 minutes early\n- Bring your medical exams if relevant\n\nPhone: +351 XXX XXX XXX\nAddress: Avenida de Roma, 1000-260 Lisboa`
+    fr: `Consultation d'ostéopathie avec Camille Labasse D.O.\n\nRecommandations:\n- Portez des vêtements confortables\n- Hydratez-vous bien avant et après la séance\n- Évitez les repas copieux 1h avant\n- Arrivez 5 minutes en avance\n- Apportez vos examens médicaux si pertinent\n\nTél: +351 930 505 939\nAdresse: Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa`,
+    pt: `Consulta de osteopatia com Camille Labasse D.O.\n\nRecomendações:\n- Use roupas confortáveis\n- Hidrate-se bem antes e depois da sessão\n- Evite refeições pesadas 1h antes\n- Chegue 5 minutos mais cedo\n- Traga seus exames médicos se relevante\n\nTel: +351 930 505 939\nEndereço: Rua Rodrigues Sampaio n76, 1º andar, 1150-279 Lisboa`,
+    en: `Osteopathy consultation with Camille Labasse D.O.\n\nRecommendations:\n- Wear comfortable clothing\n- Hydrate well before and after the session\n- Avoid heavy meals 1h before\n- Arrive 5 minutes early\n- Bring your medical exams if relevant\n\nPhone: +351 930 505 939\nAddress: Rua Rodrigues Sampaio n76, 1st floor, 1150-279 Lisboa`
   }
 
   return {
     title: titles[locale as keyof typeof titles] || titles.pt,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.pt,
-    location: 'Avenida de Roma, 1000-260 Lisboa, Portugal',
+    location: 'Rua Rodrigues Sampaio n76, 1150-279 Lisboa, Portugal',
     startDate,
     endDate,
     organizerEmail: process.env.CONTACT_EMAIL || 'camilleosteopatia@gmail.com',
