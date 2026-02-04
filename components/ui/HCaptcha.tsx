@@ -81,7 +81,7 @@ export default function HCaptcha({ onVerify, onExpire, onError }: HCaptchaProps)
 
     // Load hCaptcha script for the first time
     const script = document.createElement('script');
-    script.src = 'https://js.hcaptcha.com/1/api.js';
+    script.src = 'https://js.hcaptcha.com/1/api.js?render=explicit';
     script.async = true;
     script.defer = true;
 

@@ -256,8 +256,15 @@ export async function POST(request: NextRequest) {
         const verifyData = await verifyResponse.json();
 
         if (!verifyData.success) {
+            // Log error codes in development for debugging
+            if (process.env.NODE_ENV === 'development') {
+                console.error('[DEV] hCaptcha verification failed:', verifyData);
+            }
             return NextResponse.json(
-                { error: 'Invalid captcha. Please try again.' },
+                {
+                    error: 'Invalid captcha. Please try again.',
+                    details: process.env.NODE_ENV === 'development' ? verifyData['error-codes'] : undefined
+                },
                 { status: 400 }
             );
         }
