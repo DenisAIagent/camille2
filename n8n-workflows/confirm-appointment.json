@@ -1,0 +1,248 @@
+{
+  "name": "Confirmer Rendez-vous Ostéopathe",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "confirm-appointment",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Confirmation",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "webhookId": "confirm-appointment"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM \"Appointment\" WHERE id = '{{ $json.query.id }}' LIMIT 1",
+        "options": {}
+      },
+      "id": "get-appointment",
+      "name": "Get Appointment from DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [470, 300],
+      "credentials": {
+        "postgres": {
+          "id": "prisma-postgres",
+          "name": "Prisma PostgreSQL"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "appointment-exists",
+              "leftValue": "={{ $json.id }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "check-exists",
+      "name": "Appointment Exists?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [690, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format date for email\nconst appointment = $input.item.json;\nconst locale = appointment.locale || 'pt';\n\nconst appointmentDate = new Date(appointment.date);\n\nconst dateFormatters = {\n  fr: new Intl.DateTimeFormat('fr-FR', {\n    weekday: 'long',\n    day: 'numeric',\n    month: 'long',\n    year: 'numeric'\n  }),\n  pt: new Intl.DateTimeFormat('pt-PT', {\n    weekday: 'long',\n    day: 'numeric',\n    month: 'long',\n    year: 'numeric'\n  }),\n  en: new Intl.DateTimeFormat('en-GB', {\n    weekday: 'long',\n    day: 'numeric',\n    month: 'long',\n    year: 'numeric'\n  })\n};\n\nconst formattedDate = dateFormatters[locale].format(appointmentDate);\n\n// Create Google Calendar URL\nconst calendarDate = appointmentDate.toISOString().split('T')[0].replace(/-/g, '');\nconst [startHour] = appointment.timeSlot.split('-');\nconst calendarTime = startHour.replace(':', '') + '00';\nconst calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultation+Ostéopathie+-+Camille+Labasse&dates=${calendarDate}T${calendarTime}/${calendarDate}T${calendarTime}&details=Rendez-vous+confirmé&location=Espaço+Oneleaf,+Rua+Rodrigues+Sampaio+76,+Lisboa`;\n\n// Email content by language\nconst emailContent = {\n  fr: {\n    subject: `✅ Rendez-vous confirmé - ${formattedDate}`,\n    greeting: `Bonjour ${appointment.patientName},`,\n    confirmed: 'Votre rendez-vous d\\'ostéopathie est confirmé :',\n    date: 'Date',\n    time: 'Heure',\n    location: 'Lieu',\n    address: 'Espaço Oneleaf, Rua Rodrigues Sampaio n°76, 1º andar\\n1150-278 Lisboa',\n    calendar: 'Ajouter à Google Calendar',\n    notes: 'Notes',\n    closing: 'À bientôt,',\n    signature: 'Camille Labasse D.O.\\nOstéopathe exclusive'\n  },\n  pt: {\n    subject: `✅ Consulta confirmada - ${formattedDate}`,\n    greeting: `Olá ${appointment.patientName},`,\n    confirmed: 'A sua consulta de osteopatia está confirmada:',\n    date: 'Data',\n    time: 'Hora',\n    location: 'Local',\n    address: 'Espaço Oneleaf, Rua Rodrigues Sampaio n°76, 1º andar\\n1150-278 Lisboa',\n    calendar: 'Adicionar ao Google Calendar',\n    notes: 'Notas',\n    closing: 'Até breve,',\n    signature: 'Camille Labasse D.O.\\nOsteopata exclusiva'\n  },\n  en: {\n    subject: `✅ Appointment confirmed - ${formattedDate}`,\n    greeting: `Hello ${appointment.patientName},`,\n    confirmed: 'Your osteopathy appointment is confirmed:',\n    date: 'Date',\n    time: 'Time',\n    location: 'Location',\n    address: 'Espaço Oneleaf, Rua Rodrigues Sampaio n°76, 1º andar\\n1150-278 Lisboa',\n    calendar: 'Add to Google Calendar',\n    notes: 'Notes',\n    closing: 'See you soon,',\n    signature: 'Camille Labasse D.O.\\nExclusive Osteopath'\n  }\n};\n\nconst content = emailContent[locale];\n\n// HTML Email Template\nconst emailHtml = `\n<!DOCTYPE html>\n<html lang=\"${locale}\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>${content.subject}</title>\n</head>\n<body style=\"margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f1;\">\n  <table role=\"presentation\" style=\"width: 100%; border-collapse: collapse;\">\n    <tr>\n      <td align=\"center\" style=\"padding: 40px 0;\">\n        <table role=\"presentation\" style=\"width: 600px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);\">\n          <!-- Header -->\n          <tr>\n            <td style=\"padding: 40px 40px 20px 40px; text-align: center; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 12px 12px 0 0;\">\n              <div style=\"font-size: 60px; margin-bottom: 10px;\">✅</div>\n              <h1 style=\"margin: 0; color: #ffffff; font-size: 28px; font-weight: 600;\">\n                ${content.confirmed}\n              </h1>\n            </td>\n          </tr>\n\n          <!-- Greeting -->\n          <tr>\n            <td style=\"padding: 40px;\">\n              <p style=\"margin: 0 0 20px 0; font-size: 16px; color: #2a2c25;\">${content.greeting}</p>\n              \n              <!-- Appointment Details -->\n              <table role=\"presentation\" style=\"width: 100%; border-collapse: collapse; margin-bottom: 30px;\">\n                <tr>\n                  <td style=\"padding: 20px; background-color: #f0fdf4; border-left: 4px solid #10b981; border-radius: 4px;\">\n                    <table role=\"presentation\" style=\"width: 100%; border-collapse: collapse;\">\n                      <tr>\n                        <td style=\"padding: 8px 0;\">\n                          <strong style=\"color: #065f46;\">📅 ${content.date}:</strong>\n                          <span style=\"color: #2a2c25; margin-left: 10px;\">${formattedDate}</span>\n                        </td>\n                      </tr>\n                      <tr>\n                        <td style=\"padding: 8px 0;\">\n                          <strong style=\"color: #065f46;\">🕐 ${content.time}:</strong>\n                          <span style=\"color: #2a2c25; margin-left: 10px;\">${appointment.timeSlot}</span>\n                        </td>\n                      </tr>\n                      <tr>\n                        <td style=\"padding: 8px 0;\">\n                          <strong style=\"color: #065f46;\">📍 ${content.location}:</strong>\n                          <div style=\"color: #2a2c25; margin-left: 10px; white-space: pre-line;\">${content.address}</div>\n                        </td>\n                      </tr>\n                      ${appointment.notes ? `\n                      <tr>\n                        <td style=\"padding: 8px 0; border-top: 1px solid #d1fae5; margin-top: 8px;\">\n                          <strong style=\"color: #065f46;\">📝 ${content.notes}:</strong>\n                          <div style=\"color: #2a2c25; margin-left: 10px; font-style: italic;\">${appointment.notes}</div>\n                        </td>\n                      </tr>\n                      ` : ''}\n                    </table>\n                  </td>\n                </tr>\n              </table>\n\n              <!-- Calendar Button -->\n              <table role=\"presentation\" style=\"width: 100%; border-collapse: collapse; margin-bottom: 30px;\">\n                <tr>\n                  <td align=\"center\">\n                    <a href=\"${calendarUrl}\"\n                       style=\"display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 15px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);\">\n                      🗓️ ${content.calendar}\n                    </a>\n                  </td>\n                </tr>\n              </table>\n\n              <!-- Closing -->\n              <p style=\"margin: 20px 0 0 0; font-size: 15px; color: #2a2c25;\">${content.closing}</p>\n              <p style=\"margin: 10px 0 0 0; font-size: 15px; color: #2a2c25; white-space: pre-line;\"><strong>${content.signature}</strong></p>\n            </td>\n          </tr>\n\n          <!-- Footer -->\n          <tr>\n            <td style=\"padding: 30px 40px; text-align: center; border-top: 1px solid #e5e5e5; background-color: #fafafa; border-radius: 0 0 12px 12px;\">\n              <p style=\"margin: 0 0 8px 0; font-size: 13px; color: #6a6546;\">\n                Tel: +351 930 505 939\n              </p>\n              <p style=\"margin: 0; font-size: 13px; color: #7a7c6f;\">\n                Espaço Oneleaf, Rua Rodrigues Sampaio n°76, 1º<br>\n                1150-278 Lisboa, Portugal\n              </p>\n            </td>\n          </tr>\n        </table>\n      </td>\n    </tr>\n  </table>\n</body>\n</html>\n`;\n\nreturn {\n  json: {\n    appointmentId: appointment.id,\n    patientName: appointment.patientName,\n    patientEmail: appointment.email,\n    formattedDate: formattedDate,\n    timeSlot: appointment.timeSlot,\n    locale: locale,\n    emailSubject: content.subject,\n    emailHtml: emailHtml,\n    calendarUrl: calendarUrl\n  }\n};"
+      },
+      "id": "format-email",
+      "name": "Format Email Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [910, 180]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.patientEmail }}",
+        "subject": "={{ $json.emailSubject }}",
+        "emailType": "html",
+        "message": "={{ $json.emailHtml }}",
+        "options": {
+          "allowUnauthorizedCerts": false,
+          "ccList": "",
+          "bccList": ""
+        }
+      },
+      "id": "send-email",
+      "name": "Send Confirmation Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [1130, 180],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gmail-oauth",
+          "name": "Gmail OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE \"Appointment\" SET status = 'CONFIRMED', \"confirmedAt\" = NOW(), \"updatedAt\" = NOW() WHERE id = '{{ $('Webhook Confirmation').item.json.query.id }}'",
+        "options": {}
+      },
+      "id": "update-status",
+      "name": "Update Status to CONFIRMED",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [1350, 180],
+      "credentials": {
+        "postgres": {
+          "id": "prisma-postgres",
+          "name": "Prisma PostgreSQL"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "html",
+        "responseBody": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Rendez-vous confirmé</title>\n  <style>\n    body { font-family: system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: linear-gradient(135deg, #10b981 0%, #059669 100%); }\n    .container { background: white; padding: 3rem; border-radius: 1rem; box-shadow: 0 20px 60px rgba(0,0,0,0.3); text-align: center; max-width: 500px; }\n    h1 { color: #10b981; font-size: 2rem; margin: 0 0 1rem; }\n    p { color: #6b7280; line-height: 1.6; margin-bottom: 1.5rem; }\n    .details { background: #f0fdf4; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; text-align: left; }\n    .details strong { color: #065f46; }\n    .checkmark { font-size: 5rem; margin-bottom: 1rem; animation: scaleIn 0.5s ease-out; }\n    @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"checkmark\">✅</div>\n    <h1>Rendez-vous confirmé !</h1>\n    <p>Le rendez-vous a été confirmé avec succès.</p>\n    <div class=\"details\">\n      <p style=\"margin: 0 0 0.5rem;\"><strong>Patient :</strong> {{ $('Format Email Content').item.json.patientName }}</p>\n      <p style=\"margin: 0 0 0.5rem;\"><strong>Date :</strong> {{ $('Format Email Content').item.json.formattedDate }}</p>\n      <p style=\"margin: 0;\"><strong>Heure :</strong> {{ $('Format Email Content').item.json.timeSlot }}</p>\n    </div>\n    <p style=\"color: #10b981; font-weight: 600;\">📧 Un email de confirmation a été envoyé au patient.</p>\n  </div>\n</body>\n</html>",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=utf-8"
+              }
+            ]
+          }
+        }
+      },
+      "id": "respond-success",
+      "name": "Respond Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1570, 180]
+    },
+    {
+      "parameters": {
+        "respondWith": "html",
+        "responseBody": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Erreur</title>\n  <style>\n    body { font-family: system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }\n    .container { background: white; padding: 3rem; border-radius: 1rem; box-shadow: 0 20px 60px rgba(0,0,0,0.3); text-align: center; max-width: 500px; }\n    h1 { color: #dc2626; font-size: 2rem; margin: 0 0 1rem; }\n    p { color: #6b7280; line-height: 1.6; }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div style=\"font-size: 4rem; margin-bottom: 1rem;\">❌</div>\n    <h1>Rendez-vous introuvable</h1>\n    <p>Le rendez-vous demandé n'existe pas ou a déjà été traité.</p>\n  </div>\n</body>\n</html>",
+        "options": {
+          "responseCode": 404,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=utf-8"
+              }
+            ]
+          }
+        }
+      },
+      "id": "respond-error",
+      "name": "Respond Not Found",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [910, 420]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Confirmation": {
+      "main": [
+        [
+          {
+            "node": "Get Appointment from DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Appointment from DB": {
+      "main": [
+        [
+          {
+            "node": "Appointment Exists?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Appointment Exists?": {
+      "main": [
+        [
+          {
+            "node": "Format Email Content",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond Not Found",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Email Content": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Confirmation Email": {
+      "main": [
+        [
+          {
+            "node": "Update Status to CONFIRMED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Status to CONFIRMED": {
+      "main": [
+        [
+          {
+            "node": "Respond Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "osteopathe-booking"
+  },
+  "id": "confirm-appointment-workflow",
+  "tags": []
+}

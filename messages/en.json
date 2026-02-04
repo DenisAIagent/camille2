@@ -1,0 +1,288 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "osteopathy": "Osteopathy",
+        "trauma": "Trauma Resolution",
+        "contact": "Rates and Contact",
+        "bookAppointment": "Book Appointment",
+        "skip_to_content": "Skip to main content"
+    },
+    "HomePage": {
+        "h1": "Osteopath in Lisbon – Camille Labasse, D.O",
+        "intro": "Osteopathy has its unique yet universal, scientific and philosophical, human and naturalistic way of conceiving the human being.",
+        "welcome": "Welcome to the osteopathic clinic of Camille Labasse D.O !",
+        "h2_osteopathy": "Osteopathy: a human and natural approach",
+        "h2_welcome": "Welcome to the osteopathic clinic",
+        "h2_who": "Who is osteopathy for?",
+        "who_babies": "Babies and children",
+        "who_adults": "Adults and seniors",
+        "who_sports": "Athletes",
+        "who_pregnant": "Pregnant women",
+        "who_chronic": "People with chronic conditions or disabilities",
+        "who_pets": "Dogs and pets",
+        "h2_why": "Why consult?",
+        "why_muscle": "Musculoskeletal and neuralgic pain",
+        "why_tendinitis": "Tendinitis, inflammations",
+        "why_digestive": "Digestive disorders",
+        "why_stress": "Stress, fatigue, insomnia",
+        "why_tinnitus": "Tinnitus, vertigo, migraines and headaches",
+        "why_emotional": "Pain of emotional and traumatic origin",
+        "why_women": "Menstrual or genito-urinary disorders",
+        "h2_book": "Book an appointment",
+        "learn_more_osteopathy": "Osteopathy: learn more"
+    },
+    "OsteopathyPage": {
+        "h1": "Osteopathy: definition, indications and practice",
+        "h2_understand": "Understanding Osteopathy",
+        "text_understand": "Osteopathy diagnoses and treats mobility dysfunctions of body tissues that alter the state of health, within a general understanding of the human being. It is adapted for everyone: from babies to seniors, athletes, pregnant women, people with disabilities or chronic pathologies... The osteopathic treatment, in addition to helping solving the symptom and its cause, regulate the nervous system, reset and profoundly recharge the body.",
+        "h2_functional": "Treats functional disorders",
+        "text_functional": "Musculoskeletal pain, headaches, positional vertigo, concentration disorders, tinnitus, trauma sequelae, digestive disorders, genito-urinary and menstrual disorders, recurrent infections, fatigue, stress, insomnia...\n\nEach consultation aims to restore the body's natural balance for lasting relief.",
+        "h2_pathologies": "Adapts to pathologies",
+        "text_pathologies": "Accompanies the symptomatology of pathologies such as: fibromyalgia, osteoarthritis, Crohn's disease, irritable bowel syndrome, asthma, depression, autoimmune or oncological diseases...\n\nThe osteopathic approach offers complementary support to improve quality of life and alleviate symptoms, while adapting to specificities and taking into account contraindications.",
+        "h2_bio": "Camille's background",
+        "text_bio": "Camille is an accredited and exclusive osteopath. She studied 5 years full time in France, within an education that meets the european standards of osteopathy. \n\nShe is specialized in functional techniques, also known as indirects and gentle. She keeps on studying ad learning with the best teachers, themselves pupils of the first generations of American and British osteopaths, in France: Pierre Tricot, Elisabeth Tissot, Pascal Anselin...",
+        "cta_question": "Need a consultation?",
+        "cta_button": "Book an appointment",
+        "why_subtitle": "Solutions for your everyday ailments",
+        "gallery_title": "A soothing setting",
+        "gallery_subtitle": "My practice in Lisbon",
+        "cta_title": "Ready to take care of yourself?",
+        "cta_subtitle": "Book your appointment now for personalized care"
+    },
+    "TraumaPage": {
+        "h1": "Biodynamic osteopathy and trauma: a different somatic approach",
+        "h2_why_body": "Why does the body store trauma?",
+        "text_intro": "Unresolved trauma is inscribed in the body because the nervous system, overwhelmed, could not process the emotion. This memory remains frozen in our tissues.\n\nBiodynamic cranial osteopathy accesses these memories. Cranial touch facilitates contact with the unconscious, allowing the body to express and release the trauma.",
+        "h2_how": "How does somatic work unfold?",
+        "text_work": "In this work, the encounter with what our body holds will allow us to express the emotion that was repressed at key moments of our past, to reprocess memories, to purge the trauma, and to allow our nervous system to lastingly regulate itself.",
+        "h2_who_for": "Who is this approach for?",
+        "text_who": "This work is adapted to anyone wishing to deepen their personal development and meet the source of certain disorders (anxiety, relational blockages, chronic stress, physical symptoms that do not find their solutions through classical care).\n\nDepending on the issue and intention, this work often includes follow-up over several months, with approximately one session per month.",
+        "h2_role": "The role of the body in transformation",
+        "text_role": "The body is the key to true transformation.",
+        "cta_question": "Ready to start your healing journey?",
+        "cta_button": "Book an appointment"
+    },
+    "ContactPage": {
+        "h1": "Rates and Contact",
+        "h2_rates": "Consultation Rates",
+        "rate_consult": "Consultation: 60€",
+        "rate_reduced": "Baby under 1 year, unemployed: 50€",
+        "h2_trauma_rates": "Trauma Work Rates",
+        "trauma_social": "Social value 30-40€",
+        "trauma_medium": "Average value 70-80",
+        "trauma_abundant": "Abundant value 80+",
+        "h2_info": "Practical Information",
+        "h3_address": "Clinic Address",
+        "address_line1": "Espaço Oneleaf",
+        "address_line2": "Rua Rodrigues Sampaio n76, 1st apartment",
+        "address_note": "The building has an elevator and a facilitated access for reduced mobility patients",
+        "h3_contact": "Contact",
+        "contact_phrase": "Feel free to book an appointment or ask any question",
+        "h2_cancellation": "Cancellation Policy",
+        "cancellation_policy": "I keep my consultations at affordable prices because I want osteopathy to be accessible - despite my experience and ongoing training. I also don't require advance payment; the number of slots per day is limited so that I can always provide optimal service to everyone; and for this reason, I ask you to consider the consultation as a commitment.\n\nI therefore thank you for organizing yourself to respect it.\n\nThe consultation must be canceled or modified 24 hours in advance without charge\n\nAny consultation canceled at the last moment, except for illness or accident, is fully owed",
+        "form_name": "Name",
+        "form_email": "Email",
+        "form_message": "Message",
+        "form_submit": "Send",
+        "form_sending": "Sending...",
+        "form_success": "Message sent successfully!",
+        "form_error": "Error sending message",
+        "form_error_desc": "Please try again or contact us by phone."
+    },
+    "Contact": {
+        "email": "camilleosteopatia@gmail.com",
+        "whatsapp": "351930505939",
+        "whatsappMessage": "Hello, I would like to book an osteopathy appointment."
+    },
+    "ContactModals": {
+        "whatsapp": {
+            "title": "WhatsApp",
+            "subtitle": "Contact us",
+            "phoneLabel": "WhatsApp Number",
+            "copied": "Number copied!",
+            "openIn": "Open in:",
+            "openApp": "WhatsApp App",
+            "openWeb": "WhatsApp Web",
+            "info": "A pre-filled message will be ready to send",
+            "close": "Close"
+        },
+        "email": {
+            "title": "Email",
+            "subtitle": "Send us a message",
+            "nameLabel": "Name",
+            "namePlaceholder": "Your name",
+            "emailLabel": "Email",
+            "emailPlaceholder": "your@email.com",
+            "messageLabel": "Message",
+            "messagePlaceholder": "Your message...",
+            "send": "Send message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!",
+            "error": "Error sending. Please try again.",
+            "close": "Close"
+        }
+    },
+    "FAQPage": {
+        "h1": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about osteopathy in Lisbon",
+        "q1": "What is osteopathy?",
+        "a1": "Osteopathy is a manual therapeutic approach that aims to restore the body's natural balance. It treats mobility dysfunctions of tissues that can alter health. <a href='/osteopathie' class='text-primary hover:underline font-medium'>Learn more about osteopathy</a>.",
+        "q2": "How many sessions are needed?",
+        "a2": "The number of sessions varies for each person and the nature of the problem. Generally, 1 to 3 sessions are sufficient for acute problems, while chronic issues may require longer follow-up. Each case is evaluated individually during the first consultation.",
+        "q3": "How much does an osteopathy session cost?",
+        "a3": "A consultation costs 60€. Reduced rate of 50€ for babies under 1 year and unemployed people. <a href='/contact' class='text-primary hover:underline font-medium'>See all rates and book an appointment</a>.",
+        "q4": "Is osteopathy reimbursed?",
+        "a4": "I am not affiliated with any health insurance. However, I provide a detailed invoice that you can submit yourself to your insurance to request partial reimbursement, according to your contract.",
+        "q5": "For what types of problems can I consult?",
+        "a5": "Osteopathy treats many disorders: musculoskeletal pain, migraines, digestive disorders, stress, insomnia, vertigo, tinnitus, menstrual disorders, and much more. <a href='/osteopathie' class='text-primary hover:underline font-medium'>Discover all treated disorders</a>.",
+        "q6": "Is osteopathy suitable for babies and pregnant women?",
+        "a6": "Yes, absolutely! Osteopathy uses very gentle and safe techniques, perfectly adapted for babies (colic, sleep disorders, plagiocephaly) and pregnant women (lower back pain, childbirth preparation). <a href='/osteopathie' class='text-primary hover:underline font-medium'>Learn more about pediatric osteopathy</a>.",
+        "q7": "How long does a session last?",
+        "a7": "An osteopathy session lasts approximately 45 minutes to 1 hour. This time allows for a complete assessment, adapted treatment, and personalized advice to prolong the benefits of the session.",
+        "q8": "Do you also offer work on emotional trauma?",
+        "a8": "Yes, I offer a specialized somatic approach for releasing physical and emotional trauma. This method uses biodynamic osteopathy to treat post-traumatic stress, anxiety and emotional shocks. <a href='/trauma' class='text-primary hover:underline font-medium'>Discover the trauma approach</a>.",
+        "cta_question": "Do you have other questions?",
+        "cta_subtitle": "Feel free to contact me for any additional questions",
+        "cta_button": "Book an appointment"
+    },
+    "Reservations": {
+        "metaTitle": "Book an appointment - Osteopath Lisbon",
+        "metaDescription": "Book an appointment online with Camille Labasse, osteopath D.O in Lisbon. Confirmation within 24h."
+    },
+    "CookieConsent": {
+        "title": "Respect for your privacy",
+        "description": "We use cookies to improve your experience (Google Analytics) and store your booking data (name, email, phone) for appointment management. This information is protected and never shared with third parties.",
+        "accept": "Accept all",
+        "refuse": "Refuse cookies",
+        "learnMore": "Learn more",
+        "close": "Close"
+    },
+    "Footer": {
+        "brand_title": "Camille Labasse osteopath D.O",
+        "brand_subtitle_1": "Adults, children, pets",
+        "brand_subtitle_2": "Trauma approach",
+        "brand_subtitle_3": "Lisbon, Portugal",
+        "reviews_title": "Client Reviews",
+        "reviews_based": "Based on 12 Google reviews",
+        "reviews_button": "See reviews",
+        "link_home": "Home",
+        "link_osteopathy": "Osteopathy",
+        "link_trauma": "Trauma",
+        "link_contact": "Contact",
+        "link_faq": "FAQ",
+        "link_privacy": "Privacy",
+        "link_legal": "Legal Notice",
+        "copyright": "All rights reserved"
+    },
+    "WhoIsItFor": {
+        "subtitle": "For the whole family, at every stage of life",
+        "benefits_label": "Benefits",
+        "benefits_label_full": "Benefits of osteopathy",
+        "conditions_label": "Conditions",
+        "conditions_label_full": "Conditions treated",
+        "cta_text": "Take care of your health today",
+        "cta_button": "Book an appointment",
+        "babies": {
+            "description": "Osteopathy supports babies and children from the first days of life. Gentle and adapted techniques help relieve birth-related tensions, promote harmonious development and prevent functional disorders.",
+            "benefits": [
+                "Treatment of birth imprints and in-utero tensions",
+                "Relief from colic and digestive disorders",
+                "Improvement of sleep quality",
+                "Treatment of plagiocephaly (flat head)",
+                "Support during teething"
+            ],
+            "conditions": [
+                "Sleep disorders and excessive crying",
+                "Breastfeeding or sucking difficulties",
+                "Gastroesophageal reflux and regurgitation",
+                "Torticollis and head rotation preference",
+                "Constipation, gait disorders"
+            ]
+        },
+        "adults": {
+            "description": "Osteopathy for adults and seniors offers a holistic approach to maintain body balance, treat chronic or acute pain, and optimize daily well-being.",
+            "benefits": [
+                "Relief from musculoskeletal pain",
+                "Improved mobility and posture",
+                "Nervous system regulation and stress management",
+                "Prevention of age-related disorders",
+                "Support for chronic conditions"
+            ],
+            "conditions": [
+                "Back, neck, lumbar pain",
+                "Headaches, migraines, tension headaches",
+                "Digestive disorders and bloating",
+                "Chronic fatigue, insomnia, stress",
+                "Joint pain, osteoarthritis, rheumatism"
+            ]
+        },
+        "sports": {
+            "description": "Sports osteopathy optimizes performance, prevents injuries and accelerates recovery. An essential approach for athletes of all levels.",
+            "benefits": [
+                "Physical performance optimization",
+                "Injury and recurrence prevention",
+                "Accelerated post-exercise recovery",
+                "Improved joint range of motion",
+                "Muscular and postural rebalancing"
+            ],
+            "conditions": [
+                "Tendinitis, sprains, contractures",
+                "Joint pain and inflammation",
+                "Pubalgia, periostitis, patellar syndrome",
+                "Post-traumatic or surgical recovery",
+                "Physical preparation and movement optimization"
+            ]
+        },
+        "pregnant": {
+            "description": "Osteopathy supports pregnant women throughout pregnancy and postpartum. Gentle techniques for optimal comfort during this period of transformation.",
+            "benefits": [
+                "Relief from lumbar and pelvic pain",
+                "Pelvic preparation for childbirth",
+                "Improved circulation and reduced edema",
+                "Postpartum support and recovery",
+                "Regulation of digestive and respiratory disorders"
+            ],
+            "conditions": [
+                "Sciatica, pelvic pain and pubalgia",
+                "Nausea, reflux, constipation",
+                "Sleep disorders and fatigue",
+                "Muscle tension and cramps",
+                "Post-cesarean or episiotomy support"
+            ]
+        },
+        "chronic": {
+            "description": "Osteopathy offers valuable complementary support for people with chronic conditions or disabilities, adapting techniques to each person's specific needs.",
+            "benefits": [
+                "Improved daily quality of life",
+                "Relief from chronic pain",
+                "Maintenance of mobility and autonomy",
+                "Support for medical treatments",
+                "Holistic and personalized approach"
+            ],
+            "conditions": [
+                "Fibromyalgia, rheumatic diseases",
+                "Autoimmune diseases (Crohn's, multiple sclerosis)",
+                "Neurological disorders and motor disabilities",
+                "Chronic respiratory conditions (asthma, COPD)",
+                "Stroke sequelae, Parkinson's, degenerative disorders"
+            ]
+        },
+        "pets": {
+            "description": "Animal osteopathy applies to dogs and other pets. Adapted techniques to improve their mobility, relieve their pain and optimize their well-being.",
+            "benefits": [
+                "Improved mobility and flexibility",
+                "Relief from joint pain",
+                "Performance optimization (sport, work)",
+                "Support for aging",
+                "Prevention of musculoskeletal disorders"
+            ],
+            "conditions": [
+                "Lameness, gait disorders",
+                "Osteoarthritis, dysplasia, joint problems",
+                "Muscle stiffness and tension",
+                "Post-traumatic or surgical recovery",
+                "Pain-related behavioral disorders"
+            ]
+        }
+    }
+}

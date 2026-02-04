@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Appointment {
+  id        String   @id @default(cuid())
+
+  // Patient info
+  patientName  String
+  email        String
+  phone        String
+
+  // Appointment details
+  date         DateTime
+  timeSlot     String  // "09:00", "10:30", etc.
+  notes        String?
+
+  // System
+  locale       String  @default("pt")
+  status       String  @default("PENDING") // PENDING, CONFIRMED, CANCELLED, COMPLETED
+
+  // Timestamps
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  confirmedAt  DateTime?
+  cancelledAt  DateTime?
+
+  // Indexation pour performance
+  @@index([date, status])
+  @@index([email])
+  @@index([status])
+}

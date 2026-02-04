@@ -1,0 +1,288 @@
+{
+  "Navigation": {
+    "home": "Accueil",
+    "osteopathy": "L'Ostéopathie",
+    "trauma": "Trauma Resolution",
+    "contact": "Tarifs et contact",
+    "bookAppointment": "Prendre rendez-vous",
+    "skip_to_content": "Aller au contenu principal"
+  },
+  "HomePage": {
+    "h1": "Ostéopathe à Lisbonne – Camille Labasse, D.O",
+    "intro": "L'ostéopathie a une façon unique mais universelle, scientifique et philosophique, profondément humaniste et naturaliste, d'aborder l'être humain.",
+    "welcome": "Bienvenue au cabinet d'ostéopathie de Camille Labasse, D.O !",
+    "h2_osteopathy": "L’ostéopathie : une approche humaine et naturelle",
+    "h2_welcome": "Bienvenue au cabinet d’ostéopathie",
+    "h2_who": "Pour qui est l’ostéopathie ?",
+    "who_babies": "Bébés et enfants",
+    "who_adults": "Adultes et seniors",
+    "who_sports": "Sportifs",
+    "who_pregnant": "Femmes enceintes",
+    "who_chronic": "Personnes avec pathologies chroniques ou handicaps",
+    "who_pets": "Chiens et animaux de compagnie",
+    "h2_why": "Pourquoi consulter ?",
+    "why_muscle": "Douleurs musculo-articulaires et névralgiques",
+    "why_tendinitis": "Tendinites, inflammations",
+    "why_digestive": "Troubles digestifs",
+    "why_stress": "Stress, fatigue, insomnies",
+    "why_tinnitus": "Acouphènes, vertiges, migraines et céphalées",
+    "why_emotional": "Douleurs d'origine émotionnelle et traumatique",
+    "why_women": "Troubles menstruels ou génito-urinaires",
+    "h2_book": "Prendre rendez-vous",
+    "learn_more_osteopathy": "L'ostéopathie : en savoir plus"
+  },
+  "OsteopathyPage": {
+    "h1": "L’ostéopathie : définition, indications et pratique",
+    "h2_understand": "Comprendre l’ostéopathie",
+    "text_understand": "L'ostéopathie consiste, dans une compréhension globale du patient, à prévenir, diagnostiquer et traiter manuellement les dysfonctions de la mobilité des tissus du corps humain susceptibles d'en altérer l'état de santé. Elle s'adresse à tout le monde : du bébé au senior, pour le sportif, la femme enceinte, les personnes porteuses de maladies chroniques ou handicaps. Le soin d'ostéopathie, en plus d'aider à résoudre le symptôme et sa cause, régule le système nerveux et recharge profondément l'organisme.",
+    "h2_functional": "Traite les troubles fonctionnels",
+    "text_functional": "Douleurs musculo-articulaires, migraines et céphalées, vertiges positionnels, troubles de la concentration, acouphènes, séquelles de traumatismes, troubles digestifs, troubles génito-urinaires et menstruels, infections à répétition, fatigue, stress, insomnies...\n\nChaque consultation vise à restaurer l'équilibre naturel du corps pour un soulagement durable.",
+    "h2_pathologies": "S'adapte aux pathologies",
+    "text_pathologies": "Accompagne certaines pathologies : fibromyalgie, maladies rhumatismales et arthrose, maladie de Crohn, intestin irritable, asthme, dépression, burn-out, maladies auto-immunes...\n\nL'approche ostéopathique offre un accompagnement complémentaire pour améliorer le confort de vie et atténuer les symptômes, tout en s'adaptant aux spécificités et tenant compte des contre-indications.",
+    "h2_bio": "Le parcours de Camille",
+    "text_bio": "Camille est ostéopathe D.O, exclusive et agréée. Cela signifie qu'elle a étudié 5 années à temps plein par une école agréée par le Ministère de la Santé en France et respectueuse des normes européennes de formation en ostéopathie. \n\nElle est spécialisée dans les techniques dites fonctionnelles, indirectes et douces, et continue à se former avec les meilleurs professeurs de France: Pierre Tricot, Elisabeth Tissot, Pascal Anselin...",
+    "cta_question": "Besoin d'une consultation ?",
+    "cta_button": "Prendre rendez-vous",
+    "why_subtitle": "Des solutions pour vos maux du quotidien",
+    "gallery_title": "Un cadre apaisant",
+    "gallery_subtitle": "Mon cabinet à Lisbonne",
+    "cta_title": "Prêt à prendre soin de vous ?",
+    "cta_subtitle": "Prenez rendez-vous dès maintenant pour une consultation personnalisée"
+  },
+  "TraumaPage": {
+    "h1": "Ostéopathie biodynamique et trauma: une approche somatique différente",
+    "h2_why_body": "Pourquoi le corps stocke le trauma ?",
+    "text_intro": "Le trauma non-résolu s'inscrit dans le corps car le système nerveux, dépassé, n'a pu traiter l'émotion. Cette mémoire reste figée dans nos tissus.\n\nL'ostéopathie crânienne biodynamique accède à ces mémoires. Le toucher crânien facilite le contact avec l'inconscient, permettant au corps d'exprimer et libérer le trauma.",
+    "h2_how": "Comment se déroule le travail somatique ?",
+    "text_work": "Dans ce travail, la rencontre avec ce que garde notre corps va nous permettre d'exprimer l'émotion qui a été réprimée à des moments clés de notre passé, de reprocesser des mémoires, de purger le traumatisme, et de permettre à notre système nerveux de durablement se réguler.",
+    "h2_who_for": "Pour qui est cette approche ?",
+    "text_who": "Ce travail est adapté à quiconque souhaite approfondir son développement personnel et rencontrer la source de certains troubles (anxiété, blocages relationnels, stress chronique, symptômes physiques qui ne trouvent par leurs solutions par des soins classiques).\n\nSelon la problématique et l'intention, ce travail comprend souvent un suivi sur plusieurs mois à raison d'environ une séance par mois.",
+    "h2_role": "Le rôle du corps dans la transformation",
+    "text_role": "Le corps est la clé de la vraie transformation.",
+    "cta_question": "Prêt à entamer votre chemin de guérison ?",
+    "cta_button": "Prendre rendez-vous"
+  },
+  "ContactPage": {
+    "h1": "Tarifs et contact du cabinet d'ostéopathie",
+    "h2_rates": "Tarifs des consultations",
+    "rate_consult": "La consultation: 60€",
+    "rate_reduced": "Bébé de moins d'1 an, sans emploi: 50€",
+    "h2_trauma_rates": "Tarif pour le travail du trauma",
+    "trauma_social": "Tarif social 30-40€",
+    "trauma_medium": "Tarif moyen 70-80€",
+    "trauma_abundant": "Tarif abondant 80€+",
+    "h2_info": "Informations pratiques",
+    "h3_address": "Adresse du cabinet",
+    "address_line1": "Espaço Oneleaf",
+    "address_line2": "Rua Rodrigues Sampaio n76, 1o apartamento",
+    "address_note": "L'immeuble dispose d'un ascenseur et d'un accès facilité pour les patients à mobilité réduite",
+    "h3_contact": "Contact",
+    "contact_phrase": "Une question? Envie de prendre rendez vous?",
+    "h2_cancellation": "Politique d'annulation",
+    "cancellation_policy": "Je maintiens mes consultations à des prix abordables car je veux une accessibilité de l'ostéopathie -et ce malgré mon expérience et mes formations continues. Je ne demande pas non plus d'être payée en avance; le nombre de mes créneaux par jour est limité pour que je puisse toujours fournir un service optimal à tous; et pour cela, je demande de considérer la consultation comme un engagement.\n\nJe vous remercie donc de vous organiser pour le respecter.\n\nLa consultation doit être annulée ou modifiée avec 24h d'avance sans frais\n\nToute consultation annulée au dernier moment, sauf motif de maladie ou accident, est entièrement dûe",
+    "form_name": "Nom",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_submit": "Envoyer",
+    "form_sending": "Envoi en cours...",
+    "form_success": "Message envoyé avec succès !",
+    "form_error": "Erreur lors de l'envoi",
+    "form_error_desc": "Veuillez réessayer ou nous contacter par téléphone."
+  },
+  "Contact": {
+    "email": "camilleosteopatia@gmail.com",
+    "whatsapp": "351930505939",
+    "whatsappMessage": "Bonjour, je souhaiterais prendre rendez-vous pour une consultation d'ostéopathie."
+  },
+  "ContactModals": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "subtitle": "Contactez-nous",
+      "phoneLabel": "Numéro WhatsApp",
+      "copied": "Numéro copié !",
+      "openIn": "Ouvrir dans :",
+      "openApp": "Application WhatsApp",
+      "openWeb": "WhatsApp Web",
+      "info": "Un message pré-rempli sera prêt à être envoyé",
+      "close": "Fermer"
+    },
+    "email": {
+      "title": "Email",
+      "subtitle": "Envoyez-nous un message",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
+      "emailLabel": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Votre message...",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+      "close": "Fermer"
+    }
+  },
+  "FAQPage": {
+    "h1": "Questions Fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur l'ostéopathie à Lisbonne",
+    "q1": "Qu'est-ce que l'ostéopathie ?",
+    "a1": "L'ostéopathie est une approche thérapeutique manuelle qui vise à restaurer l'équilibre naturel du corps. Elle traite les dysfonctions de mobilité des tissus qui peuvent altérer la santé. <a href='/osteopathie' class='text-primary hover:underline font-medium'>En savoir plus sur l'ostéopathie</a>.",
+    "q2": "Combien de séances sont nécessaires ?",
+    "a2": "Le nombre de séances varie selon chaque personne et la nature du problème. En général, 1 à 3 séances suffisent pour les troubles aigus, tandis que les problèmes chroniques peuvent nécessiter un suivi plus long. Chaque cas est évalué individuellement lors de la première consultation.",
+    "q3": "Combien coûte une séance d'ostéopathie ?",
+    "a3": "La consultation coûte 60€. Tarif réduit de 50€ pour les bébés de moins d'1 an et les personnes au chômage. <a href='/contact' class='text-primary hover:underline font-medium'>Voir tous les tarifs et prendre rendez-vous</a>.",
+    "q4": "L'ostéopathie est-elle remboursée ?",
+    "a4": "Je ne suis pas affiliée à une assurance (« seguro de saúde »). Cependant, je fournis une facture détaillée que vous pouvez soumettre vous-même à votre assurance pour demander un remboursement partiel, selon votre contrat.",
+    "q5": "Pour quels types de maux peut-on consulter ?",
+    "a5": "L'ostéopathie traite de nombreux troubles : douleurs musculo-articulaires, migraines, troubles digestifs, stress, insomnies, vertiges, acouphènes, troubles menstruels, et bien plus. <a href='/osteopathie' class='text-primary hover:underline font-medium'>Découvrir tous les troubles traités</a>.",
+    "q6": "L'ostéopathie est-elle adaptée aux bébés et femmes enceintes ?",
+    "a6": "Oui, absolument ! L'ostéopathie utilise des techniques très douces et sûres, parfaitement adaptées aux bébés (coliques, troubles du sommeil, plagiocéphalie) et aux femmes enceintes (douleurs lombaires, préparation à l'accouchement). <a href='/osteopathie' class='text-primary hover:underline font-medium'>En savoir plus sur l'ostéopathie pédiatrique</a>.",
+    "q7": "Combien de temps dure une séance ?",
+    "a7": "Une séance d'ostéopathie dure environ 45 minutes à 1 heure. Ce temps permet un bilan complet, le traitement adapté, et des conseils personnalisés pour prolonger les bienfaits de la séance.",
+    "q8": "Proposez-vous aussi un travail sur les traumatismes émotionnels ?",
+    "a8": "Oui, je propose une approche somatique spécialisée pour la libération des traumatismes corporels et émotionnels. Cette méthode utilise l'ostéopathie biodynamique pour traiter le stress post-traumatique, l'anxiété et les chocs émotionnels. <a href='/trauma' class='text-primary hover:underline font-medium'>Découvrir l'approche trauma</a>.",
+    "cta_question": "Vous avez d'autres questions ?",
+    "cta_subtitle": "N'hésitez pas à me contacter pour toute question supplémentaire",
+    "cta_button": "Prendre rendez-vous"
+  },
+  "Reservations": {
+    "metaTitle": "Réserver un rendez-vous - Ostéopathe Lisbonne",
+    "metaDescription": "Prenez rendez-vous en ligne avec Camille Labasse, ostéopathe D.O à Lisbonne. Consultation confirmée sous 24h."
+  },
+  "CookieConsent": {
+    "title": "Respect de votre vie privée",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience (Google Analytics) et conservons vos données de réservation (nom, email, téléphone) pour la gestion des rendez-vous. Ces informations sont protégées et ne sont jamais partagées avec des tiers.",
+    "accept": "Tout accepter",
+    "refuse": "Refuser les cookies",
+    "learnMore": "En savoir plus",
+    "close": "Fermer"
+  },
+  "Footer": {
+    "brand_title": "Camille Labasse ostéopathe D.O",
+    "brand_subtitle_1": "Adultes, enfants, animaux domestiques",
+    "brand_subtitle_2": "Approche du trauma",
+    "brand_subtitle_3": "Lisbonne, Portugal",
+    "reviews_title": "Avis Clients",
+    "reviews_based": "Basé sur 12 avis Google",
+    "reviews_button": "Voir les avis",
+    "link_home": "Accueil",
+    "link_osteopathy": "Ostéopathie",
+    "link_trauma": "Trauma",
+    "link_contact": "Contact",
+    "link_faq": "FAQ",
+    "link_privacy": "Confidentialité",
+    "link_legal": "Mentions légales",
+    "copyright": "Tous droits réservés"
+  },
+  "WhoIsItFor": {
+    "subtitle": "Pour toute la famille, à chaque étape de la vie",
+    "benefits_label": "Bénéfices",
+    "benefits_label_full": "Bénéfices de l'ostéopathie",
+    "conditions_label": "Conditions",
+    "conditions_label_full": "Conditions traitées",
+    "cta_text": "Prenez soin de votre santé dès aujourd'hui",
+    "cta_button": "Prendre rendez-vous",
+    "babies": {
+      "description": "L'ostéopathie accompagne les bébés et enfants dès les premiers jours de vie. Les techniques douces et adaptées aident à soulager les tensions liées à la naissance, favorisent un développement harmonieux et préviennent les troubles fonctionnels.",
+      "benefits": [
+        "Traitement des empreintes de l'accouchement et des tensions in-utero",
+        "Soulagement des coliques et troubles digestifs",
+        "Amélioration de la qualité du sommeil",
+        "Traitement des plagiocéphalies (tête plate)",
+        "Soutien lors des poussées dentaires"
+      ],
+      "conditions": [
+        "Troubles du sommeil et pleurs excessifs",
+        "Difficultés d'allaitement ou de succion",
+        "Reflux gastro-œsophagien et régurgitations",
+        "Torticolis et préférence à la rotation de la tête",
+        "Constipation, troubles de la marche"
+      ]
+    },
+    "adults": {
+      "description": "L'ostéopathie pour adultes et seniors offre une approche globale pour maintenir l'équilibre du corps, traiter les douleurs chroniques ou aiguës, et optimiser le bien-être au quotidien.",
+      "benefits": [
+        "Soulagement des douleurs musculo-squelettiques",
+        "Amélioration de la mobilité et de la posture",
+        "Régulation du système nerveux et gestion du stress",
+        "Prévention des troubles liés au vieillissement",
+        "Accompagnement des pathologies chroniques"
+      ],
+      "conditions": [
+        "Douleurs de dos, cervicales, lombaires",
+        "Maux de tête, migraines, céphalées de tension",
+        "Troubles digestifs et ballonnements",
+        "Fatigue chronique, insomnie, stress",
+        "Douleurs articulaires, arthrose, rhumatismes"
+      ]
+    },
+    "sports": {
+      "description": "L'ostéopathie sportive optimise les performances, prévient les blessures et accélère la récupération. Une approche essentielle pour les athlètes de tous niveaux.",
+      "benefits": [
+        "Optimisation de la performance physique",
+        "Prévention des blessures et récidives",
+        "Accélération de la récupération post-effort",
+        "Amélioration de l'amplitude articulaire",
+        "Rééquilibrage musculaire et postural"
+      ],
+      "conditions": [
+        "Tendinites, entorses, contractures",
+        "Douleurs articulaires et inflammations",
+        "Pubalgie, périostite, syndrome rotulien",
+        "Récupération post-traumatique ou chirurgicale",
+        "Préparation physique et optimisation gestuelle"
+      ]
+    },
+    "pregnant": {
+      "description": "L'ostéopathie accompagne les femmes enceintes tout au long de la grossesse et en post-partum. Des techniques douces pour un confort optimal pendant cette période de transformation.",
+      "benefits": [
+        "Soulagement des douleurs lombaires et pelviennes",
+        "Préparation du bassin pour l'accouchement",
+        "Amélioration de la circulation et réduction des œdèmes",
+        "Accompagnement post-partum et récupération",
+        "Régulation des troubles digestifs et respiratoires"
+      ],
+      "conditions": [
+        "Sciatiques, douleurs du bassin et pubalgies",
+        "Nausées, reflux, constipation",
+        "Troubles du sommeil et fatigue",
+        "Tensions musculaires et crampes",
+        "Accompagnement après césarienne ou épisiotomie"
+      ]
+    },
+    "chronic": {
+      "description": "L'ostéopathie offre un soutien complémentaire précieux pour les personnes atteintes de pathologies chroniques ou de handicaps, en adaptant les techniques aux besoins spécifiques de chacun.",
+      "benefits": [
+        "Amélioration du confort de vie au quotidien",
+        "Soulagement des douleurs chroniques",
+        "Maintien de la mobilité et de l'autonomie",
+        "Accompagnement des traitements médicaux",
+        "Approche globale et personnalisée"
+      ],
+      "conditions": [
+        "Fibromyalgie, maladies rhumatismales",
+        "Maladies auto-immunes (Crohn, sclérose en plaques)",
+        "Troubles neurologiques et handicaps moteurs",
+        "Pathologies respiratoires chroniques (asthme, BPCO)",
+        "Séquelles d'AVC, Parkinson, troubles dégénératifs"
+      ]
+    },
+    "pets": {
+      "description": "L'ostéopathie animale s'applique aux chiens et autres animaux de compagnie. Des techniques adaptées pour améliorer leur mobilité, soulager leurs douleurs et optimiser leur bien-être.",
+      "benefits": [
+        "Amélioration de la mobilité et de la souplesse",
+        "Soulagement des douleurs articulaires",
+        "Optimisation des performances (sport, travail)",
+        "Accompagnement du vieillissement",
+        "Prévention des troubles musculo-squelettiques"
+      ],
+      "conditions": [
+        "Boiteries, troubles de la marche",
+        "Arthrose, dysplasie, problèmes articulaires",
+        "Raideurs musculaires et tensions",
+        "Récupération post-traumatique ou chirurgicale",
+        "Troubles du comportement liés à la douleur"
+      ]
+    }
+  }
+}

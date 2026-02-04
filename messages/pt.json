@@ -1,0 +1,288 @@
+{
+    "Navigation": {
+        "home": "Início",
+        "osteopathy": "A Osteopatia",
+        "trauma": "Trauma Resolution",
+        "contact": "Preços e contactos",
+        "bookAppointment": "Marcar consulta",
+        "skip_to_content": "Ir para o conteúdo principal"
+    },
+    "HomePage": {
+        "h1": "Osteopata em Lisboa – Camille Labasse, D.O",
+        "intro": "A osteopatia tem uma maneira única mas universal, científica e filosófica, profundamente humanista e naturalista de conceber o ser humano.",
+        "welcome": "Sejam bem vindos ao gabinete de osteopatia da Dra Camille Labasse !",
+        "h2_osteopathy": "A osteopatia: uma abordagem humana e natural",
+        "h2_welcome": "Bem-vindo ao gabinete de osteopatia",
+        "h2_who": "Para quem é a osteopatia?",
+        "who_babies": "Bebés e crianças",
+        "who_adults": "Adultos e idosos",
+        "who_sports": "Desportistas",
+        "who_pregnant": "Grávidas",
+        "who_chronic": "Pessoas com patologias crónicas ou handicaps",
+        "who_pets": "Cães e animais de estimação",
+        "h2_why": "Porquê consultar?",
+        "why_muscle": "Dores musculo-articulares e nevrálgicas",
+        "why_tendinitis": "Tendinites, inflamações",
+        "why_digestive": "Distúrbios digestivos",
+        "why_stress": "Stress, fadiga, insónias",
+        "why_tinnitus": "Zumbidos, vertigens, enxaquecas e dores de cabeça",
+        "why_emotional": "Dores de origem emocional e traumática",
+        "why_women": "Distúrbios menstruais ou genito-urinais",
+        "h2_book": "Marcar consulta",
+        "learn_more_osteopathy": "A osteopatia: saber mais"
+    },
+    "OsteopathyPage": {
+        "h1": "A osteopatia: definição, indicações e prática",
+        "h2_understand": "Compreender a osteopatia",
+        "text_understand": "A osteopatia diagnostica e trata as disfunções de mobilidade dos tecidos do corpo que alterem o estado de saúde, numa compreensão geral do ser humano. É adaptada para todos : desde do bebé até a terceira idade, desportistas, gravidas, pessoas com deficiências ou patologias crónicas... O tratamento de osteopatia, além de ajudar no sintoma e a sua causa, regula o sistema nervoso e recarrega profundamente o corpo.",
+        "h2_functional": "Trata os distúrbios funcionais",
+        "text_functional": "Dores musculo-articulares, dores de cabeça, vertigens, zumbidos, distúrbios da concentração, sequelas de traumatismos, distúrbios digestivos, genito-urinais, menstruais, infeções recorrentes, fadiga, stress, insónias...\n\nCada consulta visa restaurar o equilíbrio natural do corpo para um alívio duradouro.",
+        "h2_pathologies": "Adapta-se às patologias",
+        "text_pathologies": "Acompanha a sintomatologia das patologias como : fibromialgia, artrose, doença de Crohn, intestino irritável, asma, depressão, doenças autoimunes ou oncológicas...\n\nA abordagem osteopática oferece um acompanhamento complementar para melhorar o conforto de vida e aliviar os sintomas, adaptando-se às especificidades e tendo em conta as contraindicações.",
+        "h2_bio": "O percurso de Camille",
+        "text_bio": "Camille é osteopata exclusiva e certificada. Isso significa que estudou 5 anos numa escola certificada pelo Ministério da Saude francês, de acordo com os padrões europeus de formação em osteopatia. \n\nÉ especializada em técnicas ditas funcionais, indiretas e suaves. Continua a formar-se em formação contínua com os melhores professores da França: Pierre Tricot, Elisabeth Tissot, Pascal Anselin...",
+        "cta_question": "Precisa de uma consulta?",
+        "cta_button": "Marcar consulta",
+        "why_subtitle": "Soluções para os seus problemas do dia a dia",
+        "gallery_title": "Um ambiente tranquilo",
+        "gallery_subtitle": "O meu consultório em Lisboa",
+        "cta_title": "Pronto para cuidar de si?",
+        "cta_subtitle": "Marque a sua consulta agora para um atendimento personalizado"
+    },
+    "TraumaPage": {
+        "h1": "Osteopatia biodinâmica e trauma: uma abordagem somática diferente",
+        "h2_why_body": "Por que o corpo armazena o trauma?",
+        "text_intro": "O trauma não resolvido inscreve-se no corpo porque o sistema nervoso, sobrecarregado, não conseguiu processar a emoção. Esta memória permanece congelada nos nossos tecidos.\n\nA osteopatia craniana biodinâmica acede a estas memórias. O toque craniano facilita o contacto com o inconsciente, permitindo ao corpo expressar e libertar o trauma.",
+        "h2_how": "Como se desenrola o trabalho somático?",
+        "text_work": "Neste trabalho, o encontro com o que o nosso corpo guarda vai permitir-nos expressar a emoção que foi reprimida em momentos chave do nosso passado, reprocessar memórias, purgar o traumatismo e permitir ao nosso sistema nervoso regular-se de forma duradoura.",
+        "h2_who_for": "Para quem é esta abordagem?",
+        "text_who": "Este trabalho é adaptado a qualquer pessoa que deseje aprofundar o seu desenvolvimento pessoal e encontrar a origem de certos distúrbios (ansiedade, bloqueios relacionais, stress crónico, sintomas físicos que não encontram solução nos cuidados clássicos).\n\nSegundo a problemática e a intenção, este trabalho compreende frequentemente um acompanhamento durante vários meses, com cerca de uma sessão por mês.",
+        "h2_role": "O papel do corpo na transformação",
+        "text_role": "O corpo é a chave da verdadeira transformação.",
+        "cta_question": "Pronto para iniciar o seu caminho de cura?",
+        "cta_button": "Marcar consulta"
+    },
+    "ContactPage": {
+        "h1": "Preços e contactos do gabinete de osteopatia",
+        "h2_rates": "Preços das consultas",
+        "rate_consult": "A consulta: 60€",
+        "rate_reduced": "Bebé com menos de 1 ano, desemprego: 50€",
+        "h2_trauma_rates": "Preço para o trabalho do trauma",
+        "trauma_social": "Valor social 30-40€",
+        "trauma_medium": "Valor médio 70-80",
+        "trauma_abundant": "Valor abundante 80+",
+        "h2_info": "Informações práticas",
+        "h3_address": "Morada do gabinete",
+        "address_line1": "Espaço Oneleaf",
+        "address_line2": "Rua Rodrigues Sampaio n76, 1o apartamento",
+        "address_note": "O edifício tem elevador e acesso facilitado para pacientes com mobilidade reduzida",
+        "h3_contact": "Contactos",
+        "contact_phrase": "Tem uma pergunta ou quer marcar?",
+        "h2_cancellation": "Política de cancelamento",
+        "cancellation_policy": "Mantenho as minhas consultas a preços acessíveis porque quero que a osteopatia seja acessível - apesar da minha experiência e formação contínua. Também não peço pagamento antecipado; o número de horários por dia é limitado para que eu possa sempre fornecer um serviço ótimo a todos; e por isso, peço que considerem a consulta como um compromisso.\n\nAgradeço portanto que se organizem para o respeitar.\n\nA consulta deve ser cancelada ou modificada com 24h de antecedência sem custos\n\nQualquer consulta cancelada no último momento, exceto por motivo de doença ou acidente, é totalmente devida",
+        "form_name": "Nome",
+        "form_email": "Email",
+        "form_message": "Mensagem",
+        "form_submit": "Enviar",
+        "form_sending": "A enviar...",
+        "form_success": "Mensagem enviada com sucesso!",
+        "form_error": "Erro ao enviar mensagem",
+        "form_error_desc": "Por favor, tente novamente ou contacte-nos por telefone."
+    },
+    "Contact": {
+        "email": "camilleosteopatia@gmail.com",
+        "whatsapp": "351930505939",
+        "whatsappMessage": "Olá, gostaria de marcar uma consulta de osteopatia."
+    },
+    "ContactModals": {
+        "whatsapp": {
+            "title": "WhatsApp",
+            "subtitle": "Entre em contacto",
+            "phoneLabel": "Número WhatsApp",
+            "copied": "Número copiado!",
+            "openIn": "Abrir em:",
+            "openApp": "Aplicação WhatsApp",
+            "openWeb": "WhatsApp Web",
+            "info": "Uma mensagem pré-preenchida estará pronta para enviar",
+            "close": "Fechar"
+        },
+        "email": {
+            "title": "Email",
+            "subtitle": "Envie-nos uma mensagem",
+            "nameLabel": "Nome",
+            "namePlaceholder": "O seu nome",
+            "emailLabel": "Email",
+            "emailPlaceholder": "seu@email.com",
+            "messageLabel": "Mensagem",
+            "messagePlaceholder": "A sua mensagem...",
+            "send": "Enviar mensagem",
+            "sending": "A enviar...",
+            "success": "Mensagem enviada com sucesso!",
+            "error": "Erro ao enviar. Por favor, tente novamente.",
+            "close": "Fechar"
+        }
+    },
+    "FAQPage": {
+        "h1": "Perguntas Frequentes",
+        "subtitle": "Tudo o que precisa saber sobre osteopatia em Lisboa",
+        "q1": "O que é osteopatia?",
+        "a1": "A osteopatia é uma abordagem terapêutica manual que visa restaurar o equilíbrio natural do corpo. Trata disfunções de mobilidade dos tecidos que podem alterar a saúde. <a href='/osteopathie' class='text-primary hover:underline font-medium'>Saiba mais sobre a osteopatia</a>.",
+        "q2": "Quantas sessões são necessárias?",
+        "a2": "O número de sessões varia conforme cada pessoa e a natureza do problema. Geralmente, 1 a 3 sessões são suficientes para problemas agudos, enquanto problemas crónicos podem necessitar de acompanhamento mais longo. Cada caso é avaliado individualmente na primeira consulta.",
+        "q3": "Quanto custa uma sessão de osteopatia?",
+        "a3": "A consulta custa 60€. Tarifa reduzida de 50€ para bebés com menos de 1 ano e pessoas desempregadas. <a href='/contact' class='text-primary hover:underline font-medium'>Ver todas as tarifas e marcar consulta</a>.",
+        "q4": "A osteopatia é reembolsada?",
+        "a4": "Não estou afiliada a nenhum seguro de saúde. No entanto, forneço uma fatura detalhada que pode apresentar ao seu seguro para solicitar um reembolso parcial, de acordo com o seu contrato.",
+        "q5": "Para que tipos de problemas posso consultar?",
+        "a5": "A osteopatia trata diversos distúrbios: dores musculoesqueléticas, enxaquecas, distúrbios digestivos, stress, insónia, vertigens, zumbidos, distúrbios menstruais, e muito mais. <a href='/osteopathie' class='text-primary hover:underline font-medium'>Descobrir todos os distúrbios tratados</a>.",
+        "q6": "A osteopatia é adequada para bebés e grávidas?",
+        "a6": "Sim, absolutamente! A osteopatia utiliza técnicas muito suaves e seguras, perfeitamente adaptadas para bebés (cólicas, distúrbios do sono, plagiocefalia) e grávidas (dores lombares, preparação para o parto). <a href='/osteopathie' class='text-primary hover:underline font-medium'>Saiba mais sobre osteopatia pediátrica</a>.",
+        "q7": "Quanto tempo dura uma sessão?",
+        "a7": "Uma sessão de osteopatia dura aproximadamente 45 minutos a 1 hora. Este tempo permite uma avaliação completa, o tratamento adaptado e conselhos personalizados para prolongar os benefícios da sessão.",
+        "q8": "Propõe também trabalho sobre traumas emocionais?",
+        "a8": "Sim, proponho uma abordagem somática especializada para a libertação de traumas corporais e emocionais. Este método utiliza a osteopatia biodinâmica para tratar stress pós-traumático, ansiedade e choques emocionais. <a href='/trauma' class='text-primary hover:underline font-medium'>Descobrir a abordagem trauma</a>.",
+        "cta_question": "Tem outras perguntas?",
+        "cta_subtitle": "Não hesite em contactar-me para qualquer questão adicional",
+        "cta_button": "Marcar consulta"
+    },
+    "Reservations": {
+        "metaTitle": "Marcar consulta - Osteopata Lisboa",
+        "metaDescription": "Marque uma consulta online com Camille Labasse, osteopata D.O em Lisboa. Confirmação em 24h."
+    },
+    "CookieConsent": {
+        "title": "Respeito pela sua privacidade",
+        "description": "Utilizamos cookies para melhorar a sua experiência (Google Analytics) e conservamos os seus dados de reserva (nome, email, telefone) para a gestão de consultas. Estas informações são protegidas e nunca são partilhadas com terceiros.",
+        "accept": "Aceitar tudo",
+        "refuse": "Recusar cookies",
+        "learnMore": "Saber mais",
+        "close": "Fechar"
+    },
+    "Footer": {
+        "brand_title": "Camille Labasse osteopata D.O",
+        "brand_subtitle_1": "Adultos, crianças, animais domésticos",
+        "brand_subtitle_2": "Abordagem do trauma",
+        "brand_subtitle_3": "Lisboa, Portugal",
+        "reviews_title": "Avaliações de Clientes",
+        "reviews_based": "Baseado em 12 avaliações Google",
+        "reviews_button": "Ver as avaliações",
+        "link_home": "Início",
+        "link_osteopathy": "Osteopatia",
+        "link_trauma": "Trauma",
+        "link_contact": "Contacto",
+        "link_faq": "FAQ",
+        "link_privacy": "Privacidade",
+        "link_legal": "Informação Legal",
+        "copyright": "Todos os direitos reservados"
+    },
+    "WhoIsItFor": {
+        "subtitle": "Para toda a família, em cada etapa da vida",
+        "benefits_label": "Benefícios",
+        "benefits_label_full": "Benefícios da osteopatia",
+        "conditions_label": "Condições",
+        "conditions_label_full": "Condições tratadas",
+        "cta_text": "Cuide da sua saúde hoje mesmo",
+        "cta_button": "Marcar consulta",
+        "babies": {
+            "description": "A osteopatia acompanha bebés e crianças desde os primeiros dias de vida. As técnicas suaves e adaptadas ajudam a aliviar as tensões relacionadas com o nascimento, favorecem um desenvolvimento harmonioso e previnem perturbações funcionais.",
+            "benefits": [
+                "Tratamento das marcas do parto e tensões intra-uterinas",
+                "Alívio de cólicas e perturbações digestivas",
+                "Melhoria da qualidade do sono",
+                "Tratamento de plagiocefalia (cabeça achatada)",
+                "Apoio durante o nascimento dos dentes"
+            ],
+            "conditions": [
+                "Perturbações do sono e choro excessivo",
+                "Dificuldades na amamentação ou sucção",
+                "Refluxo gastroesofágico e regurgitações",
+                "Torcicolo e preferência na rotação da cabeça",
+                "Obstipação, perturbações da marcha"
+            ]
+        },
+        "adults": {
+            "description": "A osteopatia para adultos e idosos oferece uma abordagem global para manter o equilíbrio do corpo, tratar dores crónicas ou agudas e otimizar o bem-estar no dia a dia.",
+            "benefits": [
+                "Alívio de dores musculoesqueléticas",
+                "Melhoria da mobilidade e da postura",
+                "Regulação do sistema nervoso e gestão do stress",
+                "Prevenção de perturbações relacionadas com o envelhecimento",
+                "Acompanhamento de patologias crónicas"
+            ],
+            "conditions": [
+                "Dores nas costas, cervicais, lombares",
+                "Dores de cabeça, enxaquecas, cefaleias de tensão",
+                "Perturbações digestivas e inchaço abdominal",
+                "Fadiga crónica, insónia, stress",
+                "Dores articulares, artrose, reumatismo"
+            ]
+        },
+        "sports": {
+            "description": "A osteopatia desportiva otimiza o desempenho, previne lesões e acelera a recuperação. Uma abordagem essencial para atletas de todos os níveis.",
+            "benefits": [
+                "Otimização do desempenho físico",
+                "Prevenção de lesões e recidivas",
+                "Aceleração da recuperação pós-esforço",
+                "Melhoria da amplitude articular",
+                "Reequilíbrio muscular e postural"
+            ],
+            "conditions": [
+                "Tendinites, entorses, contraturas",
+                "Dores articulares e inflamações",
+                "Pubalgia, periostite, síndrome rotuliano",
+                "Recuperação pós-traumática ou cirúrgica",
+                "Preparação física e otimização gestual"
+            ]
+        },
+        "pregnant": {
+            "description": "A osteopatia acompanha as grávidas ao longo de toda a gravidez e no pós-parto. Técnicas suaves para um conforto ótimo durante este período de transformação.",
+            "benefits": [
+                "Alívio de dores lombares e pélvicas",
+                "Preparação da bacia para o parto",
+                "Melhoria da circulação e redução de edemas",
+                "Acompanhamento pós-parto e recuperação",
+                "Regulação de perturbações digestivas e respiratórias"
+            ],
+            "conditions": [
+                "Ciáticas, dores na bacia e pubalgias",
+                "Náuseas, refluxo, obstipação",
+                "Perturbações do sono e fadiga",
+                "Tensões musculares e cãibras",
+                "Acompanhamento após cesariana ou episiotomia"
+            ]
+        },
+        "chronic": {
+            "description": "A osteopatia oferece um apoio complementar valioso para pessoas com patologias crónicas ou deficiências, adaptando as técnicas às necessidades específicas de cada um.",
+            "benefits": [
+                "Melhoria do conforto de vida no dia a dia",
+                "Alívio de dores crónicas",
+                "Manutenção da mobilidade e autonomia",
+                "Acompanhamento dos tratamentos médicos",
+                "Abordagem global e personalizada"
+            ],
+            "conditions": [
+                "Fibromialgia, doenças reumáticas",
+                "Doenças autoimunes (Crohn, esclerose múltipla)",
+                "Perturbações neurológicas e deficiências motoras",
+                "Patologias respiratórias crónicas (asma, DPOC)",
+                "Sequelas de AVC, Parkinson, perturbações degenerativas"
+            ]
+        },
+        "pets": {
+            "description": "A osteopatia animal aplica-se a cães e outros animais de estimação. Técnicas adaptadas para melhorar a sua mobilidade, aliviar as suas dores e otimizar o seu bem-estar.",
+            "benefits": [
+                "Melhoria da mobilidade e flexibilidade",
+                "Alívio de dores articulares",
+                "Otimização do desempenho (desporto, trabalho)",
+                "Acompanhamento do envelhecimento",
+                "Prevenção de perturbações musculoesqueléticas"
+            ],
+            "conditions": [
+                "Coxeiras, perturbações da marcha",
+                "Artrose, displasia, problemas articulares",
+                "Rigidez muscular e tensões",
+                "Recuperação pós-traumática ou cirúrgica",
+                "Perturbações do comportamento relacionadas com a dor"
+            ]
+        }
+    }
+}
