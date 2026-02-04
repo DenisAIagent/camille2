@@ -51,16 +51,22 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     });
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        if (!captchaToken) {
-            toast.error(t('form_error') || 'Erreur', {
-                description: 'Veuillez compléter la vérification captcha.',
-            });
-            return;
-        }
-
         setIsSubmitting(true);
 
         try {
+            // Execute reCAPTCHA v3 before submitting
+            let token: string;
+            try {
+                token = await (window as any).executeRecaptcha('contact_form');
+            } catch (error) {
+                console.error('reCAPTCHA execution failed:', error);
+                toast.error(t('form_error') || 'Erreur', {
+                    description: 'Erreur de vérification captcha. Veuillez réessayer.',
+                });
+                setIsSubmitting(false);
+                return;
+            }
+
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -68,7 +74,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 },
                 body: JSON.stringify({
                     ...values,
-                    captchaToken,
+                    captchaToken: token,
                 }),
             });
 
@@ -155,16 +161,14 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     )}
                 </Button>
 
-                <div className="pt-4">
-                    <ReCaptcha
-                        onVerify={(token) => setCaptchaToken(token)}
-                        onExpire={() => setCaptchaToken(null)}
-                        onError={() => {
-                            setCaptchaToken(null);
-                            toast.error('Erreur de vérification captcha');
-                        }}
-                    />
-                </div>
+                {/* reCAPTCHA v3 Badge - Invisible but loads the script */}
+                <ReCaptcha
+                    onVerify={(token) => setCaptchaToken(token)}
+                    onError={() => {
+                        toast.error('Erreur de chargement du captcha');
+                    }}
+                    action="contact_form"
+                />
             </form>
         </Form>
     );

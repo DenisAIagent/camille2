@@ -215,8 +215,9 @@ export async function POST(request: NextRequest) {
 
         const { name, email, message, captchaToken } = validationResult.data;
 
-        // Verify reCAPTCHA token with timeout
+        // Verify reCAPTCHA v3 Enterprise token with timeout
         const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+        const recaptchaProjectId = process.env.RECAPTCHA_PROJECT_ID; // Optional for Enterprise
 
         if (!recaptchaSecret) {
             // Log error without exposing to client
@@ -231,6 +232,7 @@ export async function POST(request: NextRequest) {
 
         let verifyResponse;
         try {
+            // Use standard reCAPTCHA v3 endpoint (works for both standard and enterprise)
             verifyResponse = await fetchWithTimeout(
                 'https://www.google.com/recaptcha/api/siteverify',
                 {
@@ -255,6 +257,10 @@ export async function POST(request: NextRequest) {
 
         const verifyData = await verifyResponse.json();
 
+        if (process.env.NODE_ENV === 'development') {
+            console.log('[DEV] reCAPTCHA response:', verifyData);
+        }
+
         if (!verifyData.success) {
             // Log error codes in development for debugging
             if (process.env.NODE_ENV === 'development') {
@@ -267,6 +273,29 @@ export async function POST(request: NextRequest) {
                 },
                 { status: 400 }
             );
+        }
+
+        // For v3, check the score (0.0 to 1.0, higher is more likely human)
+        // Typical threshold: 0.5
+        const minScore = 0.5;
+        if (verifyData.score !== undefined && verifyData.score < minScore) {
+            if (process.env.NODE_ENV === 'development') {
+                console.warn('[DEV] Low reCAPTCHA score:', verifyData.score);
+            }
+            return NextResponse.json(
+                {
+                    error: 'Suspicious activity detected. Please try again.',
+                    details: process.env.NODE_ENV === 'development' ? `Score: ${verifyData.score}` : undefined
+                },
+                { status: 400 }
+            );
+        }
+
+        // Optionally verify the action matches
+        if (verifyData.action && verifyData.action !== 'contact_form') {
+            if (process.env.NODE_ENV === 'development') {
+                console.warn('[DEV] Action mismatch:', verifyData.action);
+            }
         }
 
         // Send email using Resend
