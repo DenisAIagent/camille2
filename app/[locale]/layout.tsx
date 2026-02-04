@@ -47,9 +47,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 
   const descriptions = {
-    fr: 'Cabinet d\'ostéopathie biodynamique à Lisbonne (Avenida de Roma). Soins pour adultes, enfants, femmes enceintes et sportifs. Prenez rendez-vous en ligne.',
-    pt: 'Consultório de osteopatia biodinâmica em Lisboa (Avenida de Roma). Cuidados para adultos, crianças, grávidas e desportistas. Marque a sua consulta online.',
-    en: 'Biodynamic osteopathy practice in Lisbon (Avenida de Roma). Care for adults, children, pregnant women and athletes. Book your appointment online.'
+    fr: 'Cabinet d\'ostéopathie biodynamique à Lisbonne (Rua Rodrigues Sampaio n76). Soins pour adultes, enfants, femmes enceintes et sportifs. Prenez rendez-vous en ligne.',
+    pt: 'Consultório de osteopatia biodinâmica em Lisboa (Rua Rodrigues Sampaio n76). Cuidados para adultos, crianças, grávidas e desportistas. Marque a sua consulta online.',
+    en: 'Biodynamic osteopathy practice in Lisbon (Rua Rodrigues Sampaio n76). Care for adults, children, pregnant women and athletes. Book your appointment online.'
   };
 
   const title = titles[locale as keyof typeof titles] || titles.fr;
