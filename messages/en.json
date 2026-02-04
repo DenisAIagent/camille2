@@ -86,6 +86,7 @@
         "form_submit": "Send",
         "form_sending": "Sending...",
         "form_success": "Message sent successfully!",
+        "form_success_desc": "We will respond as soon as possible.",
         "form_error": "Error sending message",
         "form_error_desc": "Please try again or contact us by phone."
     },

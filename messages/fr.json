@@ -86,6 +86,7 @@
     "form_submit": "Envoyer",
     "form_sending": "Envoi en cours...",
     "form_success": "Message envoyé avec succès !",
+    "form_success_desc": "Nous vous répondrons dans les plus brefs délais.",
     "form_error": "Erreur lors de l'envoi",
     "form_error_desc": "Veuillez réessayer ou nous contacter par téléphone."
   },
