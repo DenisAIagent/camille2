@@ -10,7 +10,7 @@ const ContentSecurityPolicy = `
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   img-src 'self' blob: data: https: www.google-analytics.com;
   font-src 'self' https://fonts.gstatic.com data:;
-  connect-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://www.google-analytics.com https://analytics.google.com;
+  connect-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com;
   frame-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://www.google.com;
   object-src 'none';
   base-uri 'self';
